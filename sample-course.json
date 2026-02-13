@@ -31,25 +31,106 @@
       "id": "m1",
       "title": "Module 1: Competency-Based Foundations",
       "competency": "Explain competency-based mastery learning for PE in practice.",
-      "learningTask": "Create a short concept map and summary describing mastery progression rules.",
+      "learningTask": "Using Promoting Active Lifestyles in Schools, create a concept map showing competency targets, evidence, and advancement rules.",
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "In 3-5 sentences, define competency evidence, criteria, and advancement rules.",
+        "prompt": "In 4-6 sentences, explain competency targets, mastery evidence, and how students advance.",
         "keywords": ["evidence", "criteria", "advance"]
       }
     },
     {
       "id": "m2",
-      "title": "Module 2: Assessment Design",
-      "competency": "Design a performance-based fitness assessment with clear criteria.",
-      "learningTask": "Draft an assessment rubric with at least 3 performance levels.",
+      "title": "Module 2: Standards and Outcome Mapping",
+      "competency": "Align PE standards and course outcomes to measurable module competencies.",
+      "learningTask": "Map at least 3 PE standards to outcomes and write one measurable competency for each.",
       "masteryCheck": {
         "type": "mcq",
-        "prompt": "Which approach best fits competency-based progression?",
+        "prompt": "Which outcome statement is most measurable for competency-based progression?",
         "options": [
-          "Advance all students after one week regardless of evidence.",
-          "Advance students only when they demonstrate the defined performance criteria.",
-          "Advance students based only on attendance."
+          "Students will understand fitness concepts.",
+          "Students can complete a 3-station circuit safely with correct form on at least 4 of 5 criteria.",
+          "Students should try their best in class."
+        ],
+        "correctIndex": 1
+      }
+    },
+    {
+      "id": "m3",
+      "title": "Module 3: Baseline Fitness Assessment",
+      "competency": "Design and administer a baseline assessment protocol with valid data collection.",
+      "learningTask": "Use Exercise Testing and Prescription to build a baseline protocol including safety screen, test sequence, and scoring sheet.",
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Describe your baseline protocol and explain how it supports valid before/after comparisons.",
+        "keywords": ["baseline", "protocol", "valid"]
+      }
+    },
+    {
+      "id": "m4",
+      "title": "Module 4: Performance Rubrics and Mastery Levels",
+      "competency": "Create a rubric with clear novice, developing, proficient, and advanced performance descriptors.",
+      "learningTask": "Draft a 4-level rubric for one movement competency and include observable criteria.",
+      "masteryCheck": {
+        "type": "mcq",
+        "prompt": "Which rubric descriptor is strongest for reliable scoring?",
+        "options": [
+          "Student shows good effort most days.",
+          "Student demonstrates proper squat mechanics on 8 of 10 reps with neutral spine and knee tracking.",
+          "Student participation is acceptable."
+        ],
+        "correctIndex": 1
+      }
+    },
+    {
+      "id": "m5",
+      "title": "Module 5: Safe Strength and Conditioning Design",
+      "competency": "Plan age-appropriate strength and conditioning sessions using safe progression principles.",
+      "learningTask": "Use NSCA Guide to High School Strength and Conditioning to draft a 2-week microcycle with warm-up, main lifts, and recovery.",
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Explain your progression choices and the safety safeguards used for adolescent learners.",
+        "keywords": ["progression", "safety", "adolescent"]
+      }
+    },
+    {
+      "id": "m6",
+      "title": "Module 6: Differentiation and Intervention",
+      "competency": "Differentiate instruction and interventions based on student performance evidence.",
+      "learningTask": "Create a tiered plan for students below, at, and above target mastery.",
+      "masteryCheck": {
+        "type": "mcq",
+        "prompt": "Which intervention best reflects evidence-based differentiation?",
+        "options": [
+          "Give every student the same task regardless of assessment results.",
+          "Use baseline and rubric data to assign targeted technique stations and coaching cues.",
+          "Advance all students to the next module after one class period."
+        ],
+        "correctIndex": 1
+      }
+    },
+    {
+      "id": "m7",
+      "title": "Module 7: Feedback, Reassessment, and Advancement",
+      "competency": "Use actionable feedback cycles and reassessment criteria to support mastery growth.",
+      "learningTask": "Design a feedback protocol with clear reassessment windows and advancement cutoffs.",
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Describe how students receive feedback, when they reassess, and what counts as mastery.",
+        "keywords": ["feedback", "reassess", "mastery"]
+      }
+    },
+    {
+      "id": "m8",
+      "title": "Module 8: Capstone Implementation Plan",
+      "competency": "Integrate outcomes, assessment, safety, and progression into a complete PE unit plan.",
+      "learningTask": "Produce a capstone plan that includes timeline, assessments, differentiation, and reporting.",
+      "masteryCheck": {
+        "type": "mcq",
+        "prompt": "Which capstone plan is most aligned to competency-based instruction?",
+        "options": [
+          "A weekly plan that grades attendance and gives one final test at the end.",
+          "A sequenced unit with baseline data, rubric checkpoints, reassessment opportunities, and advancement by demonstrated mastery.",
+          "A plan with engaging activities but no explicit criteria for progression."
         ],
         "correctIndex": 1
       }

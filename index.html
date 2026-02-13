@@ -59,12 +59,37 @@
 
     <section class="card">
       <h2>Canvas/LMS Embedding</h2>
-      <ul>
-        <li>Embed this app in Canvas using an iframe URL from your hosted domain.</li>
-        <li>On full completion, app emits <code>window.parent.postMessage({event: 'moduleCompletion'})</code>.</li>
-        <li>Optional: set <code>completionWebhookUrl</code> to notify your backend/instructor endpoint.</li>
-        <li>Optional: set <code>gradePassbackUrl</code> + <code>gradePassbackToken</code> to post a score.</li>
-      </ul>
+      <div class="guide">
+        <h3>Canvas Setup (Step-by-Step)</h3>
+        <ol>
+          <li>Publish this app URL: <code>https://akeath18.github.io/Module_builder/</code></li>
+          <li>In Canvas, open the course and click <strong>Pages</strong> then <strong>+ Page</strong>.</li>
+          <li>Give the page a name like <strong>Competency Module Studio</strong>.</li>
+          <li>Click <strong>HTML Editor</strong> (not the rich text mode).</li>
+          <li>Paste this iframe code and click <strong>Save</strong>.</li>
+          <li>Click <strong>Publish</strong> on the page.</li>
+          <li>Open the page as a student to confirm it loads and scrolls.</li>
+        </ol>
+      </div>
+
+      <p><strong>Paste this in Canvas HTML Editor:</strong></p>
+      <pre class="embed-code"><code>&lt;iframe
+  src="https://akeath18.github.io/Module_builder/"
+  width="100%"
+  height="960"
+  style="border:0"
+  title="Competency Module Studio"
+&gt;&lt;/iframe&gt;</code></pre>
+
+      <div class="guide">
+        <h3>What Happens After Students Finish</h3>
+        <ul>
+          <li>The app sends <code>postMessage</code> completion data to the parent LMS window.</li>
+          <li>If <code>completionWebhookUrl</code> is set, the app POSTs completion JSON to that URL.</li>
+          <li>If <code>gradePassbackUrl</code> and <code>gradePassbackToken</code> are set, the app POSTs score data.</li>
+        </ul>
+        <p><strong>Common fix:</strong> If the page looks blank in Canvas, republish the Canvas page and make sure the iframe <code>src</code> exactly matches the URL above.</p>
+      </div>
     </section>
   </main>
 
