@@ -106,11 +106,12 @@ This app is static (HTML/CSS/JS), so it can be hosted on most static hosting pla
 
 ### Option C: GitHub Pages (automated)
 
-This repo includes a GitHub Actions workflow that deploys to Pages on every push to `main` or `work`.
+This repo includes a GitHub Actions workflow that deploys to a `gh-pages` branch on every push to `main` or `work`.
 
 1. Push branch `main` (or `work`) to GitHub.
-2. In GitHub repo settings, go to **Pages** and set **Source** to **GitHub Actions**.
-3. The workflow named **Deploy static app to GitHub Pages** runs automatically.
+2. In GitHub repo settings, go to **Pages** and set **Source** to **Deploy from a branch**.
+3. Select branch **`gh-pages`** and folder **`/(root)`**, then save.
+4. The workflow named **Deploy static app to GitHub Pages** runs automatically.
 4. Your site URL will be: `https://<your-github-username>.github.io/<repo-name>/`.
 
 ## Canvas embedding
