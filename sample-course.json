@@ -1,0 +1,58 @@
+{
+  "title": "Fitness-Based PE Instruction",
+  "instructor": "Instructor Name",
+  "outcomes": [
+    "Design fitness lessons aligned to standards and learner needs.",
+    "Use performance evidence to determine mastery and advancement.",
+    "Apply safe strength and conditioning guidelines for adolescents."
+  ],
+  "resources": [
+    {
+      "title": "Promoting Active Lifestyles in Schools",
+      "citation": "Human Kinetics (2018)",
+      "notes": "Use for school-wide physical activity models and curriculum framing."
+    },
+    {
+      "title": "Exercise Testing and Prescription",
+      "citation": "Course text",
+      "notes": "Use to design valid assessment tasks and interpretation checkpoints."
+    },
+    {
+      "title": "NSCA Guide to High School Strength and Conditioning",
+      "citation": "NSCA (2021)",
+      "notes": "Use for safe strength programming and progression principles."
+    }
+  ],
+  "completionWebhookUrl": "",
+  "gradePassbackUrl": "",
+  "gradePassbackToken": "",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Module 1: Competency-Based Foundations",
+      "competency": "Explain competency-based mastery learning for PE in practice.",
+      "learningTask": "Create a short concept map and summary describing mastery progression rules.",
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "In 3-5 sentences, define competency evidence, criteria, and advancement rules.",
+        "keywords": ["evidence", "criteria", "advance"]
+      }
+    },
+    {
+      "id": "m2",
+      "title": "Module 2: Assessment Design",
+      "competency": "Design a performance-based fitness assessment with clear criteria.",
+      "learningTask": "Draft an assessment rubric with at least 3 performance levels.",
+      "masteryCheck": {
+        "type": "mcq",
+        "prompt": "Which approach best fits competency-based progression?",
+        "options": [
+          "Advance all students after one week regardless of evidence.",
+          "Advance students only when they demonstrate the defined performance criteria.",
+          "Advance students based only on attendance."
+        ],
+        "correctIndex": 1
+      }
+    }
+  ]
+}
