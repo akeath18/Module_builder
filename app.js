@@ -150,8 +150,9 @@ function render() {
 
 function renderCheck(module, unlocked, done) {
   const check = module.masteryCheck || {};
+  const checkType = String(check.type || '').toLowerCase();
   const disabled = !unlocked || done ? 'disabled' : '';
-  if (check.type === 'mcq') {
+  if (checkType === 'mcq') {
     return `
       <div class="check">
         <p><strong>Mastery check:</strong> ${check.prompt || ''}</p>
@@ -196,8 +197,9 @@ function bindChecks() {
 
 function evaluate(module) {
   const check = module.masteryCheck || {};
+  const checkType = String(check.type || '').toLowerCase();
 
-  if (check.type === 'mcq') {
+  if (checkType === 'mcq') {
     const selected = document.querySelector(`input[name="${module.id}"]:checked`);
     if (!selected) return false;
     return Number(selected.value) === Number(check.correctIndex);
@@ -262,8 +264,11 @@ async function maybeSignalCompletion() {
 }
 
 el.btnSample.addEventListener('click', () => {
-  el.configInput.value = JSON.stringify(sampleConfig, null, 2);
-  setMessage(el.setupMessage, 'Loaded sample configuration.', 'ok');
+  state.config = JSON.parse(JSON.stringify(sampleConfig));
+  el.configInput.value = JSON.stringify(state.config, null, 2);
+  localStorage.setItem(CONFIG_KEY, JSON.stringify(state.config));
+  setMessage(el.setupMessage, 'Loaded sample configuration and applied it to the student view.', 'ok');
+  render();
 });
 
 el.btnSave.addEventListener('click', () => {
