@@ -1,0 +1,375 @@
+{
+  "title": "Applied Strength and Conditioning: Content Knowledge Sequence",
+  "instructor": "Instructor Name",
+  "outcomes": [
+    "Explain core physiological and programming concepts used in strength and conditioning.",
+    "Interpret assessment and training variables using evidence-based reasoning.",
+    "Defend programming decisions with clear conceptual logic and professional terminology."
+  ],
+  "resources": [
+    {
+      "title": "NSCA Essentials of Strength Training and Conditioning",
+      "citation": "NSCA",
+      "notes": "Primary conceptual framework for physiology, programming variables, and periodization."
+    },
+    {
+      "title": "Exercise Testing and Prescription",
+      "citation": "Course text",
+      "notes": "Assessment interpretation, validity, and training-response principles."
+    },
+    {
+      "title": "Course Lecture Notes and Research Briefs",
+      "citation": "Instructor packet",
+      "notes": "Module-specific concept explanations and applied examples."
+    }
+  ],
+  "completionWebhookUrl": "",
+  "gradePassbackUrl": "",
+  "gradePassbackToken": "",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Module 1: Cardiorespiratory Foundations and Aerobic Adaptation Concepts",
+      "competency": "You will explain how aerobic physiology, VO2 concepts, and recovery kinetics inform evidence-based conditioning decisions.",
+      "contentLesson": [
+        {
+          "heading": "How Oxygen Delivery Limits Performance",
+          "body": "Aerobic performance depends on how effectively your body delivers and uses oxygen. Cardiac output (heart rate x stroke volume) determines oxygen delivery from the heart, while local muscle factors such as capillary density and mitochondrial enzymes determine oxygen use. VO2max represents the highest rate at which your system can take in and use oxygen during intense exercise."
+        },
+        {
+          "heading": "What Recovery Heart Rate Tells You",
+          "body": "Recovery heart rate is a marker of how quickly the autonomic nervous system shifts from stress response back toward resting balance. Faster recovery generally reflects stronger cardiorespiratory efficiency and better readiness for repeated work. Slower recovery suggests that training intensity or density may need to be reduced temporarily."
+        },
+        {
+          "heading": "How to Translate Concepts into Training Decisions",
+          "body": "Use VO2-related indicators to estimate aerobic capacity and use recovery trends to adjust early progression speed. If capacity markers are low and recovery is slow, begin with conservative intensity and smaller weekly progression steps. If capacity is higher and recovery is stable, progression can increase gradually while monitoring tolerance."
+        }
+      ],
+      "learningTask": "Use the lesson content above to build a quick concept outline in your notes, then answer the mastery check below on this page.",
+      "applicationTask": "Complete the mastery response below by explaining oxygen delivery, recovery kinetics, and progression logic in one integrated answer.",
+      "gradebook": {
+        "assignmentName": "M1 Aerobic Concept Brief",
+        "pointsPossible": 30
+      },
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Using this module's lesson content, explain how oxygen delivery, VO2 indicators, and recovery trends should guide initial aerobic intensity and progression decisions.",
+        "keywords": [
+          "cardiac output",
+          "VO2max",
+          "recovery",
+          "intensity",
+          "progression"
+        ]
+      },
+      "assessedConcepts": [
+        "cardiac output and oxygen delivery",
+        "VO2max interpretation",
+        "recovery heart rate trends",
+        "intensity starting point",
+        "progression rate decisions"
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Module 2: Strength Assessment Logic and Load Prescription Theory",
+      "competency": "You will explain the conceptual basis for submaximal testing, 1RM estimation, and intensity-zone selection.",
+      "contentLesson": [
+        {
+          "heading": "Why Strength Intensity Matters",
+          "body": "Strength adaptation is strongly influenced by relative load because load affects motor unit recruitment. As intensity increases, higher-threshold motor units are recruited and mechanical tension rises. This is why training percentage zones are used as a conceptual proxy for expected neuromuscular demand."
+        },
+        {
+          "heading": "Why We Use Submaximal Prediction",
+          "body": "Direct 1RM testing can be useful but may be inappropriate in some contexts due to skill level, fatigue state, or safety constraints. Submaximal tests combined with prediction equations estimate maximal strength while reducing risk. These models are not perfect; they are estimates that require interpretation rather than blind acceptance."
+        },
+        {
+          "heading": "How to Interpret Intensity Zones",
+          "body": "Different intensity bands shift adaptation emphasis. Moderate-to-high relative intensity often supports foundational strength development in novices because it provides sufficient mechanical stimulus while still allowing technical consistency. The concept is dose-response: enough load for adaptation, not so much that quality collapses."
+        }
+      ],
+      "learningTask": "Review the lesson sections above, then complete the mastery check below using the module terms and logic.",
+      "applicationTask": "Demonstrate mastery in the response box below by connecting motor unit recruitment, estimation logic, and intensity-zone reasoning.",
+      "gradebook": {
+        "assignmentName": "M2 Load Prescription Rationale",
+        "pointsPossible": 30
+      },
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Based on this module's lesson content, explain why submaximal estimation and moderate-to-high relative intensity are used for novice strength development.",
+        "keywords": [
+          "motor unit recruitment",
+          "submaximal",
+          "1RM",
+          "intensity",
+          "novice"
+        ]
+      },
+      "assessedConcepts": [
+        "motor unit recruitment",
+        "submaximal prediction logic",
+        "1RM estimation limits",
+        "relative intensity zones",
+        "novice adaptation rationale"
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Module 3: Movement Pattern Theory and Structural Balance",
+      "competency": "You will explain how movement classification and structural balance principles support safe, effective long-term development.",
+      "contentLesson": [
+        {
+          "heading": "Movement Patterns as a Programming Language",
+          "body": "Movement categories such as squat, hinge, push, pull, carry, and rotation help organize training by function rather than by isolated muscles alone. This pattern-based model improves transfer to complex tasks and prevents random exercise selection."
+        },
+        {
+          "heading": "Structural Balance and Force Distribution",
+          "body": "Structural balance means opposing muscle groups and movement functions develop in compatible proportions. Persistent imbalance can alter joint mechanics and increase tissue stress over time. Balanced programming distributes load across the system rather than overloading a single pattern repeatedly."
+        },
+        {
+          "heading": "Why Push-Pull Symmetry Matters",
+          "body": "When push capacity greatly exceeds pull capacity, scapular and shoulder mechanics may become less efficient under repeated load. Maintaining push-pull symmetry supports posture control, movement quality, and lower cumulative stress risk. The key concept is not exact equality, but appropriate functional balance."
+        }
+      ],
+      "learningTask": "Read each lesson block and then answer the mastery prompt below with pattern-based and structural-balance reasoning.",
+      "applicationTask": "In the response box below, explain why movement pattern balance is a core injury-prevention and performance principle.",
+      "gradebook": {
+        "assignmentName": "M3 Structural Balance Analysis",
+        "pointsPossible": 25
+      },
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Using module concepts, explain how movement-pattern organization and structural balance reduce compensation and long-term injury risk.",
+        "keywords": [
+          "movement pattern",
+          "agonist",
+          "antagonist",
+          "push-pull",
+          "injury prevention"
+        ]
+      },
+      "assessedConcepts": [
+        "movement pattern classification",
+        "agonist-antagonist balance",
+        "compensation risk",
+        "push-pull symmetry",
+        "injury prevention mechanism"
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Module 4: Volume, Intensity, and Overload Concepts",
+      "competency": "You will explain how volume, intensity, rest, and frequency interact to drive distinct neuromuscular adaptations.",
+      "contentLesson": [
+        {
+          "heading": "Training Variables Are Interdependent",
+          "body": "Volume, intensity, rest intervals, and frequency are not independent settings. Changing one variable changes total stress and recovery demand across the week. Effective design requires considering the total adaptive load, not single variables in isolation."
+        },
+        {
+          "heading": "Overload as a Progressive Signal",
+          "body": "Overload means the training stress is sufficient to force adaptation beyond current capacity. Progression models (linear, double, undulating) are different ways to distribute overload over time. The goal is sustained adaptation with manageable fatigue, not constant maximal effort."
+        },
+        {
+          "heading": "Volume vs Intensity in Novice Adaptation",
+          "body": "In novices, moderate progression in both volume and intensity often works better than extreme emphasis on one variable. Higher volume can improve practice exposure and work capacity, while sufficient intensity provides tension needed for strength gains. Good programming balances these signals across time."
+        }
+      ],
+      "learningTask": "Work through the lesson blocks and complete the mastery response below by comparing how variables change adaptation signals.",
+      "applicationTask": "Submit your in-module mastery response below showing how volume, intensity, and overload model choice interact over time.",
+      "gradebook": {
+        "assignmentName": "M4 Overload Concepts Essay",
+        "pointsPossible": 30
+      },
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "From this module's lesson content, explain how volume and intensity create different adaptation signals and how overload should be progressed responsibly.",
+        "keywords": [
+          "volume",
+          "intensity",
+          "overload",
+          "progression",
+          "fatigue"
+        ]
+      },
+      "assessedConcepts": [
+        "variable interdependence",
+        "overload progression models",
+        "volume as stress dose",
+        "intensity as tension signal",
+        "fatigue-management balance"
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Module 5: Energy Systems and Concurrent Training Concepts",
+      "competency": "You will explain oxidative, glycolytic, and phosphagen system demands and the conceptual basis of the interference effect.",
+      "contentLesson": [
+        {
+          "heading": "Energy System Emphasis by Demand",
+          "body": "All three energy systems contribute to exercise, but contribution shifts with intensity and duration. Short, high-power efforts emphasize phosphagen pathways; hard repeated efforts increase glycolytic contribution; sustained work relies heavily on oxidative processes."
+        },
+        {
+          "heading": "The Interference Effect Concept",
+          "body": "Concurrent endurance and strength work can sometimes reduce the expected strength or hypertrophy response when stress timing and total load are poorly managed. This is not a reason to remove conditioning, but a reason to structure training logically."
+        },
+        {
+          "heading": "Programming Principles That Reduce Interference",
+          "body": "Interference risk decreases when you manage session order, spacing, and cumulative fatigue. Conceptually, you are protecting key adaptation signals by reducing direct competition between high-fatigue endurance stress and high-tension resistance stress in the same recovery window."
+        }
+      ],
+      "learningTask": "Use the lesson content to identify energy-system demands and then answer the mastery check below on interference reduction.",
+      "applicationTask": "Complete the in-module mastery response by explaining concurrent-training interference and two principles that minimize it.",
+      "gradebook": {
+        "assignmentName": "M5 Interference Effect Explanation",
+        "pointsPossible": 30
+      },
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Using the module lesson content, explain the interference effect and how timing, spacing, and recovery logic reduce it in concurrent training.",
+        "keywords": [
+          "interference",
+          "energy systems",
+          "timing",
+          "recovery",
+          "concurrent"
+        ]
+      },
+      "assessedConcepts": [
+        "oxidative-glycolytic-phosphagen demands",
+        "interference effect mechanism",
+        "stress timing and spacing",
+        "recovery-window protection",
+        "concurrent-training logic"
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Module 6: Fatigue Monitoring and Autoregulation Theory",
+      "competency": "You will explain fatigue typology, performance trend interpretation, and autoregulatory decision logic.",
+      "contentLesson": [
+        {
+          "heading": "Different Types of Fatigue",
+          "body": "Fatigue can arise centrally (reduced neural drive) or peripherally (local contractile limitations). In practice, you usually observe performance outcomes rather than isolated mechanisms, so interpretation requires trend analysis over time."
+        },
+        {
+          "heading": "Functional vs Non-Functional Overreaching",
+          "body": "Functional overreaching is a planned short-term performance dip followed by positive rebound after recovery. Non-functional overreaching is a prolonged decline without timely rebound and may indicate excessive stress or insufficient recovery support."
+        },
+        {
+          "heading": "Autoregulation as Decision Quality",
+          "body": "Autoregulation uses live readiness signals (for example RPE trends, movement quality, and repeat-performance changes) to adjust training dose. The concept is adaptive precision: preserve enough stimulus for progress while preventing unresolved fatigue accumulation."
+        }
+      ],
+      "learningTask": "Read the lesson content carefully and complete the mastery check below using trend-based fatigue interpretation.",
+      "applicationTask": "Demonstrate mastery in the in-module response by distinguishing fatigue states and justifying autoregulation adjustments.",
+      "gradebook": {
+        "assignmentName": "M6 Autoregulation Decision Framework",
+        "pointsPossible": 25
+      },
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Using this module's concepts, differentiate functional and non-functional overreaching and explain how trend data guides autoregulation decisions.",
+        "keywords": [
+          "fatigue",
+          "functional overreaching",
+          "non-functional",
+          "trend",
+          "autoregulation"
+        ]
+      },
+      "assessedConcepts": [
+        "central vs peripheral fatigue",
+        "functional overreaching",
+        "non-functional overreaching",
+        "trend interpretation",
+        "autoregulation decision rules"
+      ]
+    },
+    {
+      "id": "m7",
+      "title": "Module 7: Coaching Communication and Motivation Concepts",
+      "competency": "You will explain how autonomy support, feedback quality, and communication structure influence adherence and performance.",
+      "contentLesson": [
+        {
+          "heading": "Why Motivation Is a Performance Variable",
+          "body": "Adherence is not only a personality issue; it is strongly influenced by the coaching environment. Communication that supports autonomy and competence increases engagement, while controlling language can reduce ownership and consistency."
+        },
+        {
+          "heading": "Feedback Quality and Learning",
+          "body": "Effective feedback is specific, actionable, and timed to support adjustment. Vague praise or constant criticism both reduce learning quality. High-value feedback links observed behavior to a clear correction pathway."
+        },
+        {
+          "heading": "Autonomy-Supportive Communication",
+          "body": "Autonomy support means giving meaningful rationale, offering bounded choices, and reinforcing progress signals. This approach improves perceived competence and self-regulation, which are key predictors of long-term training adherence."
+        }
+      ],
+      "learningTask": "Use the lesson blocks above to compare coaching language types, then complete the mastery response below.",
+      "applicationTask": "In the response box, explain how autonomy-supportive communication changes motivation, adherence, and perceived competence.",
+      "gradebook": {
+        "assignmentName": "M7 Coaching Psychology Reflection",
+        "pointsPossible": 20
+      },
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "From this module's lesson content, explain why autonomy-supportive communication improves adherence and competence more than controlling language.",
+        "keywords": [
+          "autonomy",
+          "feedback",
+          "competence",
+          "adherence",
+          "motivation"
+        ]
+      },
+      "assessedConcepts": [
+        "autonomy support",
+        "feedback specificity",
+        "competence perception",
+        "engagement and adherence",
+        "behavior-change mechanism"
+      ]
+    },
+    {
+      "id": "m8",
+      "title": "Module 8: Periodization and Macrocycle Knowledge Synthesis",
+      "competency": "You will synthesize assessment, adaptation, progression, and recovery concepts into a coherent periodization rationale.",
+      "contentLesson": [
+        {
+          "heading": "Periodization as Organized Adaptation",
+          "body": "Periodization organizes training stress across phases so adaptation can accumulate without chronic breakdown. Macrocycles set long-term direction, while mesocycles structure shorter adaptation blocks with specific priorities."
+        },
+        {
+          "heading": "Why Deload and Phase Transitions Matter",
+          "body": "Deloads are not interruptions; they are planned reductions in stress that restore readiness and preserve progression quality. Phase transitions shift the dominant adaptation target while maintaining enough continuity to avoid detraining effects."
+        },
+        {
+          "heading": "Using Assessment Data Across Phases",
+          "body": "Assessment evidence should shape starting points, progression speed, and emphasis by phase. High-quality macrocycle reasoning links initial profile, training-response trends, and phase objectives into one coherent adaptation narrative."
+        }
+      ],
+      "learningTask": "Review all lesson blocks and then complete the mastery check below by synthesizing periodization reasoning across phases.",
+      "applicationTask": "Provide your full in-module mastery explanation below showing how assessment evidence shapes phase structure and progression.",
+      "gradebook": {
+        "assignmentName": "M8 Periodization Concept Defense",
+        "pointsPossible": 50
+      },
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Using this module's lesson content, explain how assessment evidence should shape macrocycle structure, deload timing, and progression across phases.",
+        "keywords": [
+          "assessment",
+          "macrocycle",
+          "mesocycle",
+          "deload",
+          "progression"
+        ]
+      },
+      "assessedConcepts": [
+        "macrocycle-mesocycle structure",
+        "phase objective logic",
+        "deload rationale",
+        "assessment-driven progression",
+        "coherent adaptation narrative"
+      ]
+    }
+  ]
+}

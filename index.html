@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Competency Module Studio</title>
+  <link rel="stylesheet" href="styles.css?v=20260213a" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Competency Module Studio</h1>
+    <p>Build self-paced mastery modules for Health & PE and embed them in Canvas.</p>
+  </header>
+
+  <main class="grid">
+    <section class="card" id="instructorCard">
+      <h2>Instructor Setup</h2>
+      <p>Create or edit module configuration. Students advance only after passing each mastery check.</p>
+
+      <div class="guide">
+        <h3>Teacher Setup: Do These Steps In Order</h3>
+        <ol>
+          <li>Click <strong>Load Sample</strong> first. This gives you a working template.</li>
+          <li>Edit the JSON in <strong>Course Configuration</strong>.</li>
+          <li>Click <strong>Save Config</strong> to apply your changes to the student side.</li>
+          <li>Check <strong>Student Module View</strong> to confirm modules, locks, and checks look right.</li>
+          <li>If you want to test again from zero, click <strong>Reset Student Progress</strong>.</li>
+        </ol>
+        <p><strong>Important:</strong> Typing in the JSON box does nothing by itself. Changes only apply after you click <strong>Save Config</strong>.</p>
+      </div>
+
+      <div class="guide">
+        <h3>What Each Button Does</h3>
+        <ul>
+          <li><strong>Load Sample:</strong> Replaces current config with a safe example and updates the student view.</li>
+          <li><strong>Save Config:</strong> Validates JSON and applies it to the student view.</li>
+          <li><strong>Reset Student Progress:</strong> Clears module completion history for testing.</li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <button id="btnSample">Load Sample</button>
+        <button id="btnSave">Save Config</button>
+        <button id="btnResetProgress" class="secondary">Reset Student Progress</button>
+      </div>
+      <label for="configInput">Course Configuration (JSON)</label>
+      <textarea id="configInput" rows="20"></textarea>
+      <p class="small"><strong>Reminder:</strong> After editing JSON, always click <strong>Save Config</strong>.</p>
+      <p id="setupMessage" class="message" aria-live="polite"></p>
+      <div id="moduleLinks"></div>
+    </section>
+
+    <section class="card" id="studentCard">
+      <h2>Student Module View</h2>
+      <div id="courseHeader"></div>
+      <div id="progress"></div>
+      <div id="modules"></div>
+      <p id="studentMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card" id="embedCard">
+      <h2>Canvas/LMS Embedding</h2>
+      <div class="guide">
+        <h3>Canvas Setup (Step-by-Step)</h3>
+        <ol>
+          <li>Publish this app URL: <code>https://akeath18.github.io/Module_builder/</code> (full course) or a module URL from the Instructor panel.</li>
+          <li>In Canvas, open the course and click <strong>Pages</strong> then <strong>+ Page</strong>.</li>
+          <li>Give the page a name like <strong>Competency Module Studio</strong>.</li>
+          <li>Click <strong>HTML Editor</strong> (not the rich text mode).</li>
+          <li>Paste this iframe code and click <strong>Save</strong>.</li>
+          <li>Click <strong>Publish</strong> on the page.</li>
+          <li>Open the page as a student to confirm it loads and scrolls.</li>
+        </ol>
+      </div>
+
+      <p><strong>Paste this in Canvas HTML Editor (full course):</strong></p>
+      <pre class="embed-code"><code>&lt;iframe
+  src="https://akeath18.github.io/Module_builder/"
+  width="100%"
+  height="960"
+  style="border:0"
+  title="Competency Module Studio"
+&gt;&lt;/iframe&gt;</code></pre>
+
+      <div class="guide">
+        <h3>What Happens After Students Finish</h3>
+        <ul>
+          <li>The app sends <code>postMessage</code> completion data to the parent LMS window.</li>
+          <li>When a module is mastered, the app also sends a module-level grade payload with assignment name and points.</li>
+          <li>If <code>completionWebhookUrl</code> is set, the app POSTs completion JSON to that URL.</li>
+          <li>If <code>gradePassbackUrl</code> and <code>gradePassbackToken</code> are set, the app POSTs score data.</li>
+        </ul>
+        <p><strong>Common fix:</strong> If the page looks blank in Canvas, republish the Canvas page and make sure the iframe <code>src</code> exactly matches the URL above.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js?v=20260213a"></script>
+</body>
+</html>
