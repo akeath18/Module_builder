@@ -4,6 +4,7 @@ const PROGRESS_KEY = 'module-studio-progress-v2';
 const urlParams = new URLSearchParams(window.location.search);
 const modulePageId = urlParams.get('module');
 const isModuleOnlyPage = Boolean(modulePageId);
+const isEmbeddedFrame = window.self !== window.top;
 
 const el = {
   configInput: document.getElementById('configInput'),
@@ -236,7 +237,7 @@ function parseJSON(value, fallback) {
 }
 
 function maybeApplyPageMode() {
-  if (!isModuleOnlyPage) return;
+  if (!isModuleOnlyPage && !isEmbeddedFrame) return;
   document.body.classList.add('module-only');
   if (el.studentCard) {
     const title = el.studentCard.querySelector('h2');
