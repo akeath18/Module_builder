@@ -142,6 +142,20 @@ textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
   margin: 0;
   line-height: 1.4;
 }
+.assessed-concepts {
+  margin-top: .6rem;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-left: 4px solid #ea580c;
+  border-radius: .5rem;
+  padding: .6rem;
+}
+.assessed-concepts p {
+  margin: 0 0 .35rem 0;
+}
+.assessed-concepts ul {
+  margin: 0 0 0 1rem;
+}
 .message { margin-top: .65rem; min-height: 1.1rem; }
 .message.ok { color: var(--ok); }
 .message.warn { color: var(--warn); }

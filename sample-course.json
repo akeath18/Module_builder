@@ -45,17 +45,30 @@
           "body": "Use VO2-related indicators to estimate aerobic capacity and use recovery trends to adjust early progression speed. If capacity markers are low and recovery is slow, begin with conservative intensity and smaller weekly progression steps. If capacity is higher and recovery is stable, progression can increase gradually while monitoring tolerance."
         }
       ],
-      "learningTask": "Create a concept map showing relationships among VO2max, recovery heart rate, stroke volume, and aerobic adaptation.",
-      "applicationTask": "Write a 500-700 word explanatory brief that interprets aerobic assessment outputs and explains how they guide initial intensity and progression decisions.",
+      "learningTask": "Use the lesson content above to build a quick concept outline in your notes, then answer the mastery check below on this page.",
+      "applicationTask": "Complete the mastery response below by explaining oxygen delivery, recovery kinetics, and progression logic in one integrated answer.",
       "gradebook": {
         "assignmentName": "M1 Aerobic Concept Brief",
         "pointsPossible": 30
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "How do VO2-related indicators and recovery trends together improve the quality of aerobic programming decisions?",
-        "keywords": ["VO2max", "recovery", "intensity", "progression", "adaptation"]
-      }
+        "prompt": "Using this module's lesson content, explain how oxygen delivery, VO2 indicators, and recovery trends should guide initial aerobic intensity and progression decisions.",
+        "keywords": [
+          "cardiac output",
+          "VO2max",
+          "recovery",
+          "intensity",
+          "progression"
+        ]
+      },
+      "assessedConcepts": [
+        "cardiac output and oxygen delivery",
+        "VO2max interpretation",
+        "recovery heart rate trends",
+        "intensity starting point",
+        "progression rate decisions"
+      ]
     },
     {
       "id": "m2",
@@ -75,17 +88,30 @@
           "body": "Different intensity bands shift adaptation emphasis. Moderate-to-high relative intensity often supports foundational strength development in novices because it provides sufficient mechanical stimulus while still allowing technical consistency. The concept is dose-response: enough load for adaptation, not so much that quality collapses."
         }
       ],
-      "learningTask": "Compare two prediction equations and produce a short analysis of what each model assumes about fatigue and repetition performance.",
-      "applicationTask": "Write a 500-700 word rationale explaining why specific %1RM ranges align with different adaptation goals in novice populations.",
+      "learningTask": "Review the lesson sections above, then complete the mastery check below using the module terms and logic.",
+      "applicationTask": "Demonstrate mastery in the response box below by connecting motor unit recruitment, estimation logic, and intensity-zone reasoning.",
       "gradebook": {
         "assignmentName": "M2 Load Prescription Rationale",
         "pointsPossible": 30
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "Why is moderate-to-high relative intensity commonly recommended for foundational strength adaptation in novices?",
-        "keywords": ["motor unit recruitment", "intensity", "adaptation", "novice"]
-      }
+        "prompt": "Based on this module's lesson content, explain why submaximal estimation and moderate-to-high relative intensity are used for novice strength development.",
+        "keywords": [
+          "motor unit recruitment",
+          "submaximal",
+          "1RM",
+          "intensity",
+          "novice"
+        ]
+      },
+      "assessedConcepts": [
+        "motor unit recruitment",
+        "submaximal prediction logic",
+        "1RM estimation limits",
+        "relative intensity zones",
+        "novice adaptation rationale"
+      ]
     },
     {
       "id": "m3",
@@ -105,17 +131,30 @@
           "body": "When push capacity greatly exceeds pull capacity, scapular and shoulder mechanics may become less efficient under repeated load. Maintaining push-pull symmetry supports posture control, movement quality, and lower cumulative stress risk. The key concept is not exact equality, but appropriate functional balance."
         }
       ],
-      "learningTask": "Develop an annotated framework that defines each major movement pattern and explains its role in balanced programming.",
-      "applicationTask": "Write a 450-650 word analysis defending structural balance priorities using biomechanical and adaptation-focused reasoning.",
+      "learningTask": "Read each lesson block and then answer the mastery prompt below with pattern-based and structural-balance reasoning.",
+      "applicationTask": "In the response box below, explain why movement pattern balance is a core injury-prevention and performance principle.",
       "gradebook": {
         "assignmentName": "M3 Structural Balance Analysis",
         "pointsPossible": 25
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "How does structural imbalance increase injury risk over time, and why does push-pull balance matter conceptually?",
-        "keywords": ["agonist", "antagonist", "imbalance", "injury prevention"]
-      }
+        "prompt": "Using module concepts, explain how movement-pattern organization and structural balance reduce compensation and long-term injury risk.",
+        "keywords": [
+          "movement pattern",
+          "agonist",
+          "antagonist",
+          "push-pull",
+          "injury prevention"
+        ]
+      },
+      "assessedConcepts": [
+        "movement pattern classification",
+        "agonist-antagonist balance",
+        "compensation risk",
+        "push-pull symmetry",
+        "injury prevention mechanism"
+      ]
     },
     {
       "id": "m4",
@@ -135,17 +174,30 @@
           "body": "In novices, moderate progression in both volume and intensity often works better than extreme emphasis on one variable. Higher volume can improve practice exposure and work capacity, while sufficient intensity provides tension needed for strength gains. Good programming balances these signals across time."
         }
       ],
-      "learningTask": "Create a comparison chart of linear, double, and undulating progression models with strengths, limits, and best-use contexts.",
-      "applicationTask": "Write a 600-800 word explanatory essay describing how variable manipulation changes adaptation direction in novice clients.",
+      "learningTask": "Work through the lesson blocks and complete the mastery response below by comparing how variables change adaptation signals.",
+      "applicationTask": "Submit your in-module mastery response below showing how volume, intensity, and overload model choice interact over time.",
       "gradebook": {
         "assignmentName": "M4 Overload Concepts Essay",
         "pointsPossible": 30
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "How do volume and intensity create different adaptation signals, and why must they be balanced over time?",
-        "keywords": ["volume", "intensity", "overload", "adaptation"]
-      }
+        "prompt": "From this module's lesson content, explain how volume and intensity create different adaptation signals and how overload should be progressed responsibly.",
+        "keywords": [
+          "volume",
+          "intensity",
+          "overload",
+          "progression",
+          "fatigue"
+        ]
+      },
+      "assessedConcepts": [
+        "variable interdependence",
+        "overload progression models",
+        "volume as stress dose",
+        "intensity as tension signal",
+        "fatigue-management balance"
+      ]
     },
     {
       "id": "m5",
@@ -165,17 +217,30 @@
           "body": "Interference risk decreases when you manage session order, spacing, and cumulative fatigue. Conceptually, you are protecting key adaptation signals by reducing direct competition between high-fatigue endurance stress and high-tension resistance stress in the same recovery window."
         }
       ],
-      "learningTask": "Construct a concept matrix linking training stimulus type to dominant energy system demand and expected adaptation outcomes.",
-      "applicationTask": "Write a 550-750 word explanation of the interference effect and defend two evidence-based strategies that reduce its impact.",
+      "learningTask": "Use the lesson content to identify energy-system demands and then answer the mastery check below on interference reduction.",
+      "applicationTask": "Complete the in-module mastery response by explaining concurrent-training interference and two principles that minimize it.",
       "gradebook": {
         "assignmentName": "M5 Interference Effect Explanation",
         "pointsPossible": 30
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "What is the interference effect, and which programming principles reduce it without removing conditioning work?",
-        "keywords": ["interference", "recovery", "energy systems", "adaptation"]
-      }
+        "prompt": "Using the module lesson content, explain the interference effect and how timing, spacing, and recovery logic reduce it in concurrent training.",
+        "keywords": [
+          "interference",
+          "energy systems",
+          "timing",
+          "recovery",
+          "concurrent"
+        ]
+      },
+      "assessedConcepts": [
+        "oxidative-glycolytic-phosphagen demands",
+        "interference effect mechanism",
+        "stress timing and spacing",
+        "recovery-window protection",
+        "concurrent-training logic"
+      ]
     },
     {
       "id": "m6",
@@ -195,17 +260,30 @@
           "body": "Autoregulation uses live readiness signals (for example RPE trends, movement quality, and repeat-performance changes) to adjust training dose. The concept is adaptive precision: preserve enough stimulus for progress while preventing unresolved fatigue accumulation."
         }
       ],
-      "learningTask": "Analyze three written case scenarios and identify which fatigue pattern is present and what conceptual adjustment rule applies.",
-      "applicationTask": "Write a 500-700 word decision framework that explains when and why load, volume, or frequency should be adjusted.",
+      "learningTask": "Read the lesson content carefully and complete the mastery check below using trend-based fatigue interpretation.",
+      "applicationTask": "Demonstrate mastery in the in-module response by distinguishing fatigue states and justifying autoregulation adjustments.",
       "gradebook": {
         "assignmentName": "M6 Autoregulation Decision Framework",
         "pointsPossible": 25
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "How do you distinguish functional overreaching from non-functional overreaching using trend-based evidence?",
-        "keywords": ["fatigue", "overreaching", "adaptation", "recovery"]
-      }
+        "prompt": "Using this module's concepts, differentiate functional and non-functional overreaching and explain how trend data guides autoregulation decisions.",
+        "keywords": [
+          "fatigue",
+          "functional overreaching",
+          "non-functional",
+          "trend",
+          "autoregulation"
+        ]
+      },
+      "assessedConcepts": [
+        "central vs peripheral fatigue",
+        "functional overreaching",
+        "non-functional overreaching",
+        "trend interpretation",
+        "autoregulation decision rules"
+      ]
     },
     {
       "id": "m7",
@@ -225,17 +303,30 @@
           "body": "Autonomy support means giving meaningful rationale, offering bounded choices, and reinforcing progress signals. This approach improves perceived competence and self-regulation, which are key predictors of long-term training adherence."
         }
       ],
-      "learningTask": "Develop a concept brief that contrasts autonomy-supportive versus controlling coaching language and predicted client responses.",
-      "applicationTask": "Write a 450-650 word reflection analyzing how communication choices alter competence perception, engagement, and long-term adherence.",
+      "learningTask": "Use the lesson blocks above to compare coaching language types, then complete the mastery response below.",
+      "applicationTask": "In the response box, explain how autonomy-supportive communication changes motivation, adherence, and perceived competence.",
       "gradebook": {
         "assignmentName": "M7 Coaching Psychology Reflection",
         "pointsPossible": 20
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "Why does autonomy-supportive coaching typically improve adherence and perceived competence?",
-        "keywords": ["autonomy", "competence", "adherence", "motivation"]
-      }
+        "prompt": "From this module's lesson content, explain why autonomy-supportive communication improves adherence and competence more than controlling language.",
+        "keywords": [
+          "autonomy",
+          "feedback",
+          "competence",
+          "adherence",
+          "motivation"
+        ]
+      },
+      "assessedConcepts": [
+        "autonomy support",
+        "feedback specificity",
+        "competence perception",
+        "engagement and adherence",
+        "behavior-change mechanism"
+      ]
     },
     {
       "id": "m8",
@@ -255,17 +346,30 @@
           "body": "Assessment evidence should shape starting points, progression speed, and emphasis by phase. High-quality macrocycle reasoning links initial profile, training-response trends, and phase objectives into one coherent adaptation narrative."
         }
       ],
-      "learningTask": "Create an annotated concept outline showing how assessment data, overload progression, conditioning integration, and monitoring connect across an 8-week plan.",
-      "applicationTask": "Write a 700-900 word capstone defense explaining the logic of an 8-week periodized model and how each phase supports targeted adaptation.",
+      "learningTask": "Review all lesson blocks and then complete the mastery check below by synthesizing periodization reasoning across phases.",
+      "applicationTask": "Provide your full in-module mastery explanation below showing how assessment evidence shapes phase structure and progression.",
       "gradebook": {
         "assignmentName": "M8 Periodization Concept Defense",
         "pointsPossible": 50
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "How should assessment evidence shape macrocycle structure and progression decisions across phases?",
-        "keywords": ["assessment", "periodization", "progression", "adaptation"]
-      }
+        "prompt": "Using this module's lesson content, explain how assessment evidence should shape macrocycle structure, deload timing, and progression across phases.",
+        "keywords": [
+          "assessment",
+          "macrocycle",
+          "mesocycle",
+          "deload",
+          "progression"
+        ]
+      },
+      "assessedConcepts": [
+        "macrocycle-mesocycle structure",
+        "phase objective logic",
+        "deload rationale",
+        "assessment-driven progression",
+        "coherent adaptation narrative"
+      ]
     }
   ]
 }
