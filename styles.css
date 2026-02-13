@@ -156,6 +156,42 @@ textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 .assessed-concepts ul {
   margin: 0 0 0 1rem;
 }
+.formative-zone {
+  margin-top: .6rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 4px solid #16a34a;
+  border-radius: .5rem;
+  padding: .6rem;
+}
+.formative-item {
+  background: #ffffff;
+  border: 1px solid #dcfce7;
+  border-radius: .45rem;
+  padding: .5rem;
+  margin-top: .5rem;
+}
+.formative-item p {
+  margin: 0 0 .35rem 0;
+}
+.formative-item select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: .4rem;
+  padding: .4rem;
+  margin-top: .2rem;
+}
+.adaptive-coach {
+  margin-top: .6rem;
+  background: #faf5ff;
+  border: 1px solid #e9d5ff;
+  border-left: 4px solid #7e22ce;
+  border-radius: .5rem;
+  padding: .55rem;
+}
+.adaptive-coach p {
+  margin: 0 0 .35rem 0;
+}
 .guided-support {
   margin: .55rem 0;
   background: #ecfeff;

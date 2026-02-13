@@ -1,5 +1,7 @@
 const CONFIG_KEY = 'module-studio-config-v2';
 const PROGRESS_KEY = 'module-studio-progress-v2';
+const FORMATIVE_KEY = 'module-studio-formative-v1';
+const ATTEMPT_KEY = 'module-studio-attempts-v1';
 
 const urlParams = new URLSearchParams(window.location.search);
 const modulePageId = urlParams.get('module');
@@ -399,7 +401,9 @@ const sampleConfig = {
 };
 let state = {
   config: sampleConfig,
-  progress: {}
+  progress: {},
+  formative: {},
+  attempts: {}
 };
 
 function setMessage(target, text, tone = '') {
@@ -427,8 +431,12 @@ function maybeApplyPageMode() {
 function loadState() {
   const savedConfig = localStorage.getItem(CONFIG_KEY);
   const savedProgress = localStorage.getItem(PROGRESS_KEY);
+  const savedFormative = localStorage.getItem(FORMATIVE_KEY);
+  const savedAttempts = localStorage.getItem(ATTEMPT_KEY);
   state.config = savedConfig ? parseJSON(savedConfig, sampleConfig) : sampleConfig;
   state.progress = savedProgress ? parseJSON(savedProgress, {}) : {};
+  state.formative = savedFormative ? parseJSON(savedFormative, {}) : {};
+  state.attempts = savedAttempts ? parseJSON(savedAttempts, {}) : {};
 
   if (el.configInput) {
     el.configInput.value = JSON.stringify(state.config, null, 2);
@@ -448,6 +456,14 @@ function loadState() {
 
 function saveProgress() {
   localStorage.setItem(PROGRESS_KEY, JSON.stringify(state.progress));
+}
+
+function saveFormative() {
+  localStorage.setItem(FORMATIVE_KEY, JSON.stringify(state.formative));
+}
+
+function saveAttempts() {
+  localStorage.setItem(ATTEMPT_KEY, JSON.stringify(state.attempts));
 }
 
 function validateConfig(config) {
@@ -583,6 +599,8 @@ function render() {
         <p><strong>Knowledge practice:</strong> ${m.learningTask || 'Complete the guided knowledge practice for this module.'}</p>
         <p><strong>Knowledge demonstration:</strong> ${m.applicationTask || 'Complete and submit the knowledge demonstration response for this module.'}</p>
         ${renderGradebook(m)}
+        ${renderFormativeActivities(m, unlocked, doneState)}
+        ${renderAdaptiveCoach(m)}
         ${renderAssessedConcepts(m)}
         ${renderCheck(m, unlocked, doneState)}
       </article>
@@ -592,6 +610,7 @@ function render() {
 
   renderModuleLinks();
   bindChecks();
+  bindFormativeActivities();
   bindGuidedDraftTools();
   maybeSignalCompletion();
 }
@@ -611,6 +630,131 @@ function renderAssessedConcepts(module) {
       <ul>
         ${concepts.map((c) => `<li>${c}</li>`).join('')}
       </ul>
+    </div>
+  `;
+}
+
+function buildDefaultFormativeActivities(module) {
+  const concepts = Array.isArray(module.assessedConcepts) ? module.assessedConcepts : [];
+  const headings = Array.isArray(module.contentLesson) ? module.contentLesson.map((b) => b.heading).filter(Boolean) : [];
+  const keywords = module.masteryCheck?.keywords || [];
+  const coreConcept = concepts[0] || 'core concept';
+  const secondConcept = concepts[1] || 'supporting concept';
+  const distractor = 'a topic not central to this module lesson';
+  const pairs = headings.slice(0, 3).map((h, idx) => ({
+    left: h,
+    right: concepts[idx] || `concept ${idx + 1}`
+  }));
+  const matchOptions = [...new Set(pairs.map((p) => p.right))];
+  const clozeAnswer = keywords[0] || coreConcept;
+
+  return [
+    {
+      id: 'fa-mcq',
+      type: 'mcq',
+      prompt: 'Which concept is directly emphasized as a core mastery target in this module?',
+      options: [coreConcept, secondConcept, distractor],
+      correctIndex: 0,
+      explanation: `${coreConcept} is explicitly listed as a directly assessed concept.`
+    },
+    {
+      id: 'fa-match',
+      type: 'matching',
+      prompt: 'Match each lesson section to the assessed concept it most directly supports.',
+      pairs,
+      options: matchOptions
+    },
+    {
+      id: 'fa-cloze',
+      type: 'cloze',
+      prompt: `Fill in the missing key term: A high-quality mastery response in this module should clearly explain "${clozeAnswer}" in context.`,
+      answers: [clozeAnswer]
+    }
+  ];
+}
+
+function getFormativeActivities(module) {
+  if (Array.isArray(module.formativeActivities) && module.formativeActivities.length > 0) {
+    return module.formativeActivities;
+  }
+  return buildDefaultFormativeActivities(module);
+}
+
+function getFormativeCompletion(module) {
+  const activities = getFormativeActivities(module);
+  const marks = state.formative[module.id] || {};
+  const done = activities.filter((a) => marks[a.id]).length;
+  return { done, total: activities.length };
+}
+
+function renderFormativeActivities(module, unlocked, done) {
+  if (!unlocked || done) return '';
+  const activities = getFormativeActivities(module);
+  if (!activities.length) return '';
+  const marks = state.formative[module.id] || {};
+  const completion = getFormativeCompletion(module);
+
+  return `
+    <div class="formative-zone">
+      <p><strong>Formative Learning Activities</strong> (${completion.done}/${completion.total} complete)</p>
+      ${activities
+        .map((a) => {
+          const pass = Boolean(marks[a.id]);
+          return `
+            <div class="formative-item">
+              <p><strong>${pass ? 'Completed' : 'Try this'}:</strong> ${a.prompt || ''}</p>
+              ${renderFormativeInput(module, a)}
+              <div class="row">
+                <button type="button" data-check-activity="${module.id}:${a.id}">Check Activity</button>
+              </div>
+              <p class="small" data-activity-feedback="${module.id}:${a.id}"></p>
+            </div>
+          `;
+        })
+        .join('')}
+    </div>
+  `;
+}
+
+function renderFormativeInput(module, activity) {
+  const aid = `${module.id}:${activity.id}`;
+  if (activity.type === 'mcq') {
+    return (activity.options || [])
+      .map(
+        (opt, idx) =>
+          `<label><input type="radio" name="fa-${aid}" value="${idx}" /> ${opt}</label><br>`
+      )
+      .join('');
+  }
+
+  if (activity.type === 'matching') {
+    const options = activity.options || [];
+    return `
+      ${(activity.pairs || [])
+        .map(
+          (pair, idx) => `
+            <label>${pair.left}<br>
+              <select data-match="${aid}:${idx}">
+                <option value="">Select match</option>
+                ${options.map((o) => `<option value="${o}">${o}</option>`).join('')}
+              </select>
+            </label>
+          `
+        )
+        .join('')}
+    `;
+  }
+
+  return `<input type="text" data-cloze="${aid}" placeholder="Type the missing term" />`;
+}
+
+function renderAdaptiveCoach(module) {
+  const tries = Number(state.attempts[module.id] || 0);
+  const tone = tries > 0 ? 'Keep going: revise using the focused guidance below.' : 'Complete formative activities first, then attempt mastery.';
+  return `
+    <div class="adaptive-coach">
+      <p><strong>Adaptive Coach</strong></p>
+      <p class="small" data-adaptive-feedback="${module.id}">${tone}</p>
     </div>
   `;
 }
@@ -686,6 +830,8 @@ function bindChecks() {
 
       const result = evaluate(module);
       if (result.pass) {
+        state.attempts[moduleId] = 0;
+        saveAttempts();
         state.progress[moduleId] = {
           done: true,
           completedAt: new Date().toISOString(),
@@ -696,6 +842,9 @@ function bindChecks() {
         setMessage(el.studentMessage, `Mastery demonstrated for ${module.title}.`, 'ok');
         render();
       } else {
+        state.attempts[moduleId] = Number(state.attempts[moduleId] || 0) + 1;
+        saveAttempts();
+        updateAdaptiveFeedback(module, result);
         const missing = result.missingKeywords?.length
           ? ` Missing key terms: ${result.missingKeywords.slice(0, 3).join(', ')}.`
           : '';
@@ -703,6 +852,60 @@ function bindChecks() {
       }
     });
   });
+}
+
+function bindFormativeActivities() {
+  document.querySelectorAll('[data-check-activity]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-check-activity') || '';
+      const [moduleId, activityId] = id.split(':');
+      const module = state.config.modules.find((m) => m.id === moduleId);
+      if (!module) return;
+      const result = evaluateFormativeActivity(module, activityId);
+      const feedbackEl = document.querySelector(`[data-activity-feedback="${id}"]`);
+      if (feedbackEl) {
+        feedbackEl.textContent = result.message;
+      }
+      if (!state.formative[moduleId]) state.formative[moduleId] = {};
+      state.formative[moduleId][activityId] = result.pass;
+      saveFormative();
+      if (result.pass) {
+        setMessage(el.studentMessage, 'Nice work. Keep building your explanation and submit mastery when ready.', 'ok');
+      }
+      render();
+    });
+  });
+}
+
+function evaluateFormativeActivity(module, activityId) {
+  const activities = getFormativeActivities(module);
+  const activity = activities.find((a) => a.id === activityId);
+  if (!activity) return { pass: false, message: 'Activity not found.' };
+  const aid = `${module.id}:${activity.id}`;
+
+  if (activity.type === 'mcq') {
+    const selected = document.querySelector(`input[name="fa-${aid}"]:checked`);
+    if (!selected) return { pass: false, message: 'Select an answer before checking.' };
+    const pass = Number(selected.value) === Number(activity.correctIndex);
+    return { pass, message: pass ? (activity.explanation || 'Correct.') : 'Not quite. Re-read the lesson block and try again.' };
+  }
+
+  if (activity.type === 'matching') {
+    const pairs = activity.pairs || [];
+    if (!pairs.length) return { pass: true, message: 'No matching pairs configured.' };
+    const pass = pairs.every((pair, idx) => {
+      const sel = document.querySelector(`[data-match="${aid}:${idx}"]`);
+      return sel && sel.value && sel.value === pair.right;
+    });
+    return { pass, message: pass ? 'Great match work. You linked lesson sections to assessed concepts correctly.' : 'Some matches are off. Revisit the concept headings and retry.' };
+  }
+
+  const input = document.querySelector(`[data-cloze="${aid}"]`);
+  const val = (input?.value || '').trim().toLowerCase();
+  if (!val) return { pass: false, message: 'Enter a term before checking.' };
+  const answers = (activity.answers || []).map((a) => String(a).toLowerCase());
+  const pass = answers.some((a) => val === a || val.includes(a) || a.includes(val));
+  return { pass, message: pass ? 'Correct term identified.' : 'Not yet. Use the key terms list in Guided Learning Support and try again.' };
 }
 
 function bindGuidedDraftTools() {
@@ -743,6 +946,22 @@ function bindGuidedDraftTools() {
       }
     });
   });
+}
+
+function updateAdaptiveFeedback(module, result) {
+  const feedbackEl = document.querySelector(`[data-adaptive-feedback="${module.id}"]`);
+  if (!feedbackEl) return;
+  const tries = Number(state.attempts[module.id] || 0);
+  const completion = getFormativeCompletion(module);
+  const missing = result.missingKeywords || [];
+  const missingText = missing.length ? `Target missing terms: ${missing.slice(0, 3).join(', ')}.` : '';
+  const activityText = completion.done < completion.total
+    ? `Complete remaining formative activities (${completion.done}/${completion.total}) before your next attempt.`
+    : 'Formative activities are complete; now tighten your concept-to-implication links.';
+  const hintText = tries >= 3
+    ? 'Use this structure: define term -> explain mechanism -> connect to programming decision.'
+    : 'Name each assessed concept directly and connect it to the mastery question.';
+  feedbackEl.textContent = `Attempt ${tries}. ${missingText} ${activityText} ${hintText}`.trim();
 }
 
 function evaluate(module) {
