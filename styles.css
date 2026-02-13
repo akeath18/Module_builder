@@ -63,6 +63,17 @@ body {
   padding: .75rem;
   overflow-x: auto;
 }
+.module-link-list {
+  margin: .35rem 0 .25rem 1rem;
+}
+.module-link-list li {
+  margin: .35rem 0;
+}
+.module-link-list code {
+  display: inline-block;
+  margin-top: .2rem;
+  word-break: break-all;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -117,3 +128,14 @@ textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 .message.warn { color: var(--warn); }
 .message.error { color: var(--error); }
 .small { font-size: .9rem; color: #374151; }
+
+body.module-only .hero,
+body.module-only #instructorCard,
+body.module-only #embedCard {
+  display: none;
+}
+body.module-only .grid {
+  grid-template-columns: minmax(320px, 900px);
+  justify-content: center;
+  padding-top: 1.25rem;
+}

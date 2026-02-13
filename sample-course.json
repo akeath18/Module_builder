@@ -31,7 +31,14 @@
       "id": "m1",
       "title": "Module 1: Competency-Based Foundations",
       "competency": "Explain competency-based mastery learning for PE in practice.",
-      "learningTask": "Using Promoting Active Lifestyles in Schools, create a concept map showing competency targets, evidence, and advancement rules.",
+      "instruction": "Read the assigned section from Promoting Active Lifestyles in Schools and take notes on mastery progression language.",
+      "contentConnection": "Connect course outcomes to how evidence is collected before advancement.",
+      "learningTask": "Create a concept map showing competency targets, evidence types, and advancement rules.",
+      "applicationTask": "Submit a one-page concept map and a 150-word rationale describing how your progression decisions protect instructional quality.",
+      "gradebook": {
+        "assignmentName": "M1 Competency Foundations",
+        "pointsPossible": 10
+      },
       "masteryCheck": {
         "type": "short-answer",
         "prompt": "In 4-6 sentences, explain competency targets, mastery evidence, and how students advance.",
@@ -42,7 +49,14 @@
       "id": "m2",
       "title": "Module 2: Standards and Outcome Mapping",
       "competency": "Align PE standards and course outcomes to measurable module competencies.",
+      "instruction": "Review your standards matrix and identify verbs that can be observed and scored.",
+      "contentConnection": "Use the text examples to translate broad goals into measurable statements.",
       "learningTask": "Map at least 3 PE standards to outcomes and write one measurable competency for each.",
+      "applicationTask": "Build a standards-to-competency table with measurable performance indicators.",
+      "gradebook": {
+        "assignmentName": "M2 Standards Mapping",
+        "pointsPossible": 10
+      },
       "masteryCheck": {
         "type": "mcq",
         "prompt": "Which outcome statement is most measurable for competency-based progression?",
@@ -58,7 +72,14 @@
       "id": "m3",
       "title": "Module 3: Baseline Fitness Assessment",
       "competency": "Design and administer a baseline assessment protocol with valid data collection.",
-      "learningTask": "Use Exercise Testing and Prescription to build a baseline protocol including safety screen, test sequence, and scoring sheet.",
+      "instruction": "Read Exercise Testing and Prescription guidance on validity, safety, and sequence of testing.",
+      "contentConnection": "Identify which measures will be used later for growth comparisons.",
+      "learningTask": "Build a baseline protocol including safety screen, test sequence, and scoring sheet.",
+      "applicationTask": "Submit your baseline protocol with a data table template and safety notes.",
+      "gradebook": {
+        "assignmentName": "M3 Baseline Assessment Plan",
+        "pointsPossible": 15
+      },
       "masteryCheck": {
         "type": "short-answer",
         "prompt": "Describe your baseline protocol and explain how it supports valid before/after comparisons.",
@@ -68,8 +89,15 @@
     {
       "id": "m4",
       "title": "Module 4: Performance Rubrics and Mastery Levels",
-      "competency": "Create a rubric with clear novice, developing, proficient, and advanced performance descriptors.",
+      "competency": "Create a rubric with clear novice, developing, proficient, and advanced descriptors.",
+      "instruction": "Review rubric examples and isolate criteria that are observable in a PE setting.",
+      "contentConnection": "Ensure each level can be scored consistently by different instructors.",
       "learningTask": "Draft a 4-level rubric for one movement competency and include observable criteria.",
+      "applicationTask": "Submit a completed 4-level rubric and a short scoring guide.",
+      "gradebook": {
+        "assignmentName": "M4 Rubric Design",
+        "pointsPossible": 10
+      },
       "masteryCheck": {
         "type": "mcq",
         "prompt": "Which rubric descriptor is strongest for reliable scoring?",
@@ -85,7 +113,14 @@
       "id": "m5",
       "title": "Module 5: Safe Strength and Conditioning Design",
       "competency": "Plan age-appropriate strength and conditioning sessions using safe progression principles.",
-      "learningTask": "Use NSCA Guide to High School Strength and Conditioning to draft a 2-week microcycle with warm-up, main lifts, and recovery.",
+      "instruction": "Read the NSCA high school progression guidance and identify risk controls.",
+      "contentConnection": "Tie your session design to adolescent safety and progression over time.",
+      "learningTask": "Draft a 2-week microcycle with warm-up, primary lifts, accessories, and recovery.",
+      "applicationTask": "Submit your microcycle with rationale for load progression and supervision points.",
+      "gradebook": {
+        "assignmentName": "M5 Safe S&C Plan",
+        "pointsPossible": 15
+      },
       "masteryCheck": {
         "type": "short-answer",
         "prompt": "Explain your progression choices and the safety safeguards used for adolescent learners.",
@@ -96,7 +131,14 @@
       "id": "m6",
       "title": "Module 6: Differentiation and Intervention",
       "competency": "Differentiate instruction and interventions based on student performance evidence.",
-      "learningTask": "Create a tiered plan for students below, at, and above target mastery.",
+      "instruction": "Review baseline and rubric data examples and classify students by support need.",
+      "contentConnection": "Intervention decisions must be tied to evidence, not participation alone.",
+      "learningTask": "Create a tiered intervention plan for students below, at, and above target mastery.",
+      "applicationTask": "Submit a tiered intervention matrix with coaching cues and reassessment trigger.",
+      "gradebook": {
+        "assignmentName": "M6 Differentiation Plan",
+        "pointsPossible": 10
+      },
       "masteryCheck": {
         "type": "mcq",
         "prompt": "Which intervention best reflects evidence-based differentiation?",
@@ -112,7 +154,14 @@
       "id": "m7",
       "title": "Module 7: Feedback, Reassessment, and Advancement",
       "competency": "Use actionable feedback cycles and reassessment criteria to support mastery growth.",
+      "instruction": "Review feedback loop examples and draft a reassessment policy with timelines.",
+      "contentConnection": "Students should know exactly what to improve before reassessment.",
       "learningTask": "Design a feedback protocol with clear reassessment windows and advancement cutoffs.",
+      "applicationTask": "Submit a feedback/reassessment workflow including communication templates.",
+      "gradebook": {
+        "assignmentName": "M7 Feedback and Reassessment",
+        "pointsPossible": 10
+      },
       "masteryCheck": {
         "type": "short-answer",
         "prompt": "Describe how students receive feedback, when they reassess, and what counts as mastery.",
@@ -123,7 +172,14 @@
       "id": "m8",
       "title": "Module 8: Capstone Implementation Plan",
       "competency": "Integrate outcomes, assessment, safety, and progression into a complete PE unit plan.",
-      "learningTask": "Produce a capstone plan that includes timeline, assessments, differentiation, and reporting.",
+      "instruction": "Review all prior module deliverables and combine them into one coherent unit implementation plan.",
+      "contentConnection": "Your capstone must show direct alignment between competencies, evidence, and grade reporting.",
+      "learningTask": "Produce a capstone unit plan that includes timeline, assessments, differentiation, and reporting.",
+      "applicationTask": "Submit the full unit packet with assessment tools, progression rules, and gradebook mapping.",
+      "gradebook": {
+        "assignmentName": "M8 Capstone Unit Plan",
+        "pointsPossible": 20
+      },
       "masteryCheck": {
         "type": "mcq",
         "prompt": "Which capstone plan is most aligned to competency-based instruction?",

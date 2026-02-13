@@ -13,7 +13,7 @@
   </header>
 
   <main class="grid">
-    <section class="card">
+    <section class="card" id="instructorCard">
       <h2>Instructor Setup</h2>
       <p>Create or edit module configuration. Students advance only after passing each mastery check.</p>
 
@@ -47,9 +47,10 @@
       <textarea id="configInput" rows="20"></textarea>
       <p class="small"><strong>Reminder:</strong> After editing JSON, always click <strong>Save Config</strong>.</p>
       <p id="setupMessage" class="message" aria-live="polite"></p>
+      <div id="moduleLinks"></div>
     </section>
 
-    <section class="card">
+    <section class="card" id="studentCard">
       <h2>Student Module View</h2>
       <div id="courseHeader"></div>
       <div id="progress"></div>
@@ -57,12 +58,12 @@
       <p id="studentMessage" class="message" aria-live="polite"></p>
     </section>
 
-    <section class="card">
+    <section class="card" id="embedCard">
       <h2>Canvas/LMS Embedding</h2>
       <div class="guide">
         <h3>Canvas Setup (Step-by-Step)</h3>
         <ol>
-          <li>Publish this app URL: <code>https://akeath18.github.io/Module_builder/</code></li>
+          <li>Publish this app URL: <code>https://akeath18.github.io/Module_builder/</code> (full course) or a module URL from the Instructor panel.</li>
           <li>In Canvas, open the course and click <strong>Pages</strong> then <strong>+ Page</strong>.</li>
           <li>Give the page a name like <strong>Competency Module Studio</strong>.</li>
           <li>Click <strong>HTML Editor</strong> (not the rich text mode).</li>
@@ -72,7 +73,7 @@
         </ol>
       </div>
 
-      <p><strong>Paste this in Canvas HTML Editor:</strong></p>
+      <p><strong>Paste this in Canvas HTML Editor (full course):</strong></p>
       <pre class="embed-code"><code>&lt;iframe
   src="https://akeath18.github.io/Module_builder/"
   width="100%"
@@ -85,6 +86,7 @@
         <h3>What Happens After Students Finish</h3>
         <ul>
           <li>The app sends <code>postMessage</code> completion data to the parent LMS window.</li>
+          <li>When a module is mastered, the app also sends a module-level grade payload with assignment name and points.</li>
           <li>If <code>completionWebhookUrl</code> is set, the app POSTs completion JSON to that URL.</li>
           <li>If <code>gradePassbackUrl</code> and <code>gradePassbackToken</code> are set, the app POSTs score data.</li>
         </ul>
