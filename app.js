@@ -592,6 +592,7 @@ function render() {
 
   renderModuleLinks();
   bindChecks();
+  bindGuidedDraftTools();
   maybeSignalCompletion();
 }
 
@@ -610,6 +611,40 @@ function renderAssessedConcepts(module) {
       <ul>
         ${concepts.map((c) => `<li>${c}</li>`).join('')}
       </ul>
+    </div>
+  `;
+}
+
+function getShortAnswerCoverage(answer, keywords) {
+  const normalized = String(answer || '').toLowerCase();
+  const keyList = Array.isArray(keywords) ? keywords : [];
+  const hits = keyList.filter((k) => normalized.includes(String(k).toLowerCase()));
+  const missing = keyList.filter((k) => !normalized.includes(String(k).toLowerCase()));
+  const ratio = keyList.length ? hits.length / keyList.length : 0;
+  return { hits, missing, ratio };
+}
+
+function renderGuidedSupport(module, disabled) {
+  const check = module.masteryCheck || {};
+  const keywords = check.keywords || [];
+  const concepts = Array.isArray(module.assessedConcepts) ? module.assessedConcepts : [];
+  const starters = concepts.slice(0, 3).map((c) => `A key concept in this module is ${c} because...`);
+  const starterHtml = starters.length
+    ? `<ul>${starters.map((s) => `<li>${s}</li>`).join('')}</ul>`
+    : '<p class="small">Use clear concept-definition -> explanation -> implication structure.</p>';
+
+  if (!keywords.length && !starters.length) return '';
+
+  return `
+    <div class="guided-support">
+      <p><strong>Guided Learning Support</strong></p>
+      ${keywords.length ? `<p class="small"><strong>Key terms to include:</strong> ${keywords.join(', ')}</p>` : ''}
+      <p class="small"><strong>Sentence starters:</strong></p>
+      ${starterHtml}
+      <div class="row">
+        <button type="button" data-draft-check="${module.id}" ${disabled}>Check My Draft</button>
+      </div>
+      <p class="small" data-draft-feedback="${module.id}"></p>
     </div>
   `;
 }
@@ -634,7 +669,9 @@ function renderCheck(module, unlocked, done) {
     <div class="check">
       <p class="small"><strong>Assessment rule:</strong> Your response should directly address the assessed concepts listed above.</p>
       <p><strong>Mastery check:</strong> ${check.prompt || ''}</p>
-      <textarea data-answer="${module.id}" rows="3" ${disabled}></textarea>
+      ${renderGuidedSupport(module, disabled)}
+      <textarea data-answer="${module.id}" rows="5" ${disabled}></textarea>
+      <p class="small" data-coverage="${module.id}"></p>
       <div class="row"><button data-submit="${module.id}" ${disabled}>Submit</button></div>
     </div>
   `;
@@ -659,7 +696,50 @@ function bindChecks() {
         setMessage(el.studentMessage, `Mastery demonstrated for ${module.title}.`, 'ok');
         render();
       } else {
-        setMessage(el.studentMessage, 'Not yet mastered. Revisit the module lesson content above, then resubmit.', 'warn');
+        const missing = result.missingKeywords?.length
+          ? ` Missing key terms: ${result.missingKeywords.slice(0, 3).join(', ')}.`
+          : '';
+        setMessage(el.studentMessage, `Not yet mastered.${missing} Revisit the lesson content and guided support, then resubmit.`, 'warn');
+      }
+    });
+  });
+}
+
+function bindGuidedDraftTools() {
+  const updateCoverage = (moduleId) => {
+    const module = state.config.modules.find((m) => m.id === moduleId);
+    if (!module) return;
+    const check = module.masteryCheck || {};
+    const keywords = check.keywords || [];
+    const answerEl = document.querySelector(`[data-answer="${moduleId}"]`);
+    const coverageEl = document.querySelector(`[data-coverage="${moduleId}"]`);
+    if (!answerEl || !coverageEl || !keywords.length) return;
+    const coverage = getShortAnswerCoverage(answerEl.value || '', keywords);
+    const requiredHits = Math.max(2, Math.ceil(keywords.length * 0.5));
+    coverageEl.textContent = `Coverage: ${coverage.hits.length}/${keywords.length} key terms (${requiredHits} required to pass).`;
+  };
+
+  document.querySelectorAll('[data-answer]').forEach((field) => {
+    const moduleId = field.getAttribute('data-answer');
+    updateCoverage(moduleId);
+    field.addEventListener('input', () => updateCoverage(moduleId));
+  });
+
+  document.querySelectorAll('[data-draft-check]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const moduleId = btn.getAttribute('data-draft-check');
+      const module = state.config.modules.find((m) => m.id === moduleId);
+      if (!module) return;
+      const answerEl = document.querySelector(`[data-answer="${moduleId}"]`);
+      const feedbackEl = document.querySelector(`[data-draft-feedback="${moduleId}"]`);
+      if (!answerEl || !feedbackEl) return;
+      const result = evaluate(module);
+      if (result.pass) {
+        feedbackEl.textContent = 'Draft check: this response currently meets the mastery threshold.';
+      } else if (result.missingKeywords?.length) {
+        feedbackEl.textContent = `Draft check: add clearer explanation of ${result.missingKeywords.slice(0, 3).join(', ')}.`;
+      } else {
+        feedbackEl.textContent = 'Draft check: add more concept-specific detail from the module lesson content.';
       }
     });
   });
@@ -683,14 +763,17 @@ function evaluate(module) {
   const keywords = check.keywords || [];
   if (!keywords.length) {
     const pass = answer.length >= 40;
-    return { pass, scorePercent: pass ? 100 : 0 };
+    return { pass, scorePercent: pass ? 100 : 0, missingKeywords: [] };
   }
 
-  const normalized = answer.toLowerCase();
-  const hits = keywords.filter((k) => normalized.includes(String(k).toLowerCase())).length;
-  const ratio = hits / keywords.length;
-  const pass = ratio >= 0.67;
-  return { pass, scorePercent: Math.round(ratio * 100) };
+  const coverage = getShortAnswerCoverage(answer, keywords);
+  const requiredHits = Math.max(2, Math.ceil(keywords.length * 0.5));
+  const pass = coverage.hits.length >= requiredHits;
+  return {
+    pass,
+    scorePercent: Math.round(coverage.ratio * 100),
+    missingKeywords: coverage.missing
+  };
 }
 
 async function postToOptionalGradePassback(payload) {
