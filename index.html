@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Competency Module Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Competency Module Studio</h1>
+    <p>Build self-paced mastery modules for Health & PE and embed them in Canvas.</p>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Instructor Setup</h2>
+      <p>Create or edit module configuration. Students advance only after passing each mastery check.</p>
+      <div class="row">
+        <button id="btnSample">Load Sample</button>
+        <button id="btnSave">Save Config</button>
+        <button id="btnResetProgress" class="secondary">Reset Student Progress</button>
+      </div>
+      <label for="configInput">Course Configuration (JSON)</label>
+      <textarea id="configInput" rows="20"></textarea>
+      <p id="setupMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Student Module View</h2>
+      <div id="courseHeader"></div>
+      <div id="progress"></div>
+      <div id="modules"></div>
+      <p id="studentMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Canvas/LMS Embedding</h2>
+      <ul>
+        <li>Embed this app in Canvas using an iframe URL from your hosted domain.</li>
+        <li>On full completion, app emits <code>window.parent.postMessage({event: 'moduleCompletion'})</code>.</li>
+        <li>Optional: set <code>completionWebhookUrl</code> to notify your backend/instructor endpoint.</li>
+        <li>Optional: set <code>gradePassbackUrl</code> + <code>gradePassbackToken</code> to post a score.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

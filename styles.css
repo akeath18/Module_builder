@@ -1,0 +1,92 @@
+:root {
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --ink: #1f2937;
+  --accent: #1d4ed8;
+  --ok: #0f766e;
+  --warn: #b45309;
+  --error: #b91c1c;
+  --border: #d5deea;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+.hero {
+  background: linear-gradient(120deg, #1e3a8a, #1d4ed8);
+  color: #fff;
+  padding: 1.25rem 1rem;
+}
+.hero h1 { margin: 0 0 .4rem 0; }
+.hero p { margin: 0; opacity: .95; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  padding: 1rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: .65rem 0;
+}
+button {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  border-radius: .5rem;
+  padding: .5rem .75rem;
+  cursor: pointer;
+}
+button.secondary {
+  color: var(--accent);
+  background: #fff;
+}
+button:disabled { opacity: .55; cursor: not-allowed; }
+textarea, input[type="text"] {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  padding: .6rem;
+}
+textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.module {
+  border: 1px solid var(--border);
+  border-radius: .6rem;
+  padding: .75rem;
+  margin-top: .7rem;
+}
+.module.locked { opacity: .55; }
+.status {
+  display: inline-block;
+  margin-left: .5rem;
+  border-radius: 999px;
+  padding: .1rem .5rem;
+  font-size: .75rem;
+  background: #e2e8f0;
+}
+.status.done { background: #ccfbf1; color: #115e59; }
+.check {
+  background: #eff6ff;
+  border-left: 4px solid var(--accent);
+  padding: .6rem;
+  margin-top: .6rem;
+}
+.message { margin-top: .65rem; min-height: 1.1rem; }
+.message.ok { color: var(--ok); }
+.message.warn { color: var(--warn); }
+.message.error { color: var(--error); }
+.small { font-size: .9rem; color: #374151; }
