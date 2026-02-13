@@ -23,176 +23,217 @@ const el = {
 };
 
 const sampleConfig = {
-  title: 'Applied Strength and Conditioning Program Design',
-  instructor: 'Instructor Name',
-  outcomes: [
-    'Conduct valid fitness assessments and convert findings into exercise prescriptions.',
-    'Design progressive strength and conditioning programs using NSCA-aligned principles.',
-    'Monitor adaptation and adjust plans using autoregulation and coaching best practices.'
+  "title": "Applied Strength and Conditioning: Content Knowledge Sequence",
+  "instructor": "Instructor Name",
+  "outcomes": [
+    "Explain core physiological and programming concepts used in strength and conditioning.",
+    "Interpret assessment and training variables using evidence-based reasoning.",
+    "Defend programming decisions with clear conceptual logic and professional terminology."
   ],
-  resources: [
+  "resources": [
     {
-      title: 'NSCA Essentials of Strength Training and Conditioning',
-      citation: 'NSCA',
-      notes: 'Primary framework for testing, prescription, progression, and periodization.'
+      "title": "NSCA Essentials of Strength Training and Conditioning",
+      "citation": "NSCA",
+      "notes": "Primary conceptual framework for physiology, programming variables, and periodization."
     },
     {
-      title: 'Exercise Testing and Prescription',
-      citation: 'Course text',
-      notes: 'Assessment protocols, contraindications, and fitness classification methods.'
+      "title": "Exercise Testing and Prescription",
+      "citation": "Course text",
+      "notes": "Assessment interpretation, validity, and training-response principles."
     },
     {
-      title: 'UC Gym Assessment and Programming Protocol Packet',
-      citation: 'Program packet',
-      notes: 'Local implementation procedures, equipment constraints, and coaching standards.'
+      "title": "Course Lecture Notes and Research Briefs",
+      "citation": "Instructor packet",
+      "notes": "Module-specific concept explanations and applied examples."
     }
   ],
-  completionWebhookUrl: '',
-  gradePassbackUrl: '',
-  gradePassbackToken: '',
-  modules: [
+  "completionWebhookUrl": "",
+  "gradePassbackUrl": "",
+  "gradePassbackToken": "",
+  "modules": [
     {
-      id: 'm1',
-      title: 'Module 1: Cardiorespiratory Assessment and Aerobic Programming Foundations',
-      competency: 'Students must demonstrate the ability to conduct submaximal aerobic assessments, calculate VO2max estimates, interpret recovery kinetics, and prescribe an evidence-based aerobic training plan aligned to NSCA principles.',
-      instruction: 'Students will: (1) study aerobic energy system physiology including central and peripheral adaptations; (2) review NSCA testing principles including validity, reliability, and contraindications; (3) analyze Bruce Protocol, Cooper Test, and YMCA Step Test procedures; (4) calculate VO2max estimates from raw data; (5) classify aerobic fitness level; (6) construct an intensity prescription using RPE, %HRmax, and/or talk test models; (7) justify duration and frequency using NSCA volume guidelines.',
-      contentConnection: 'Establishes physiological and mathematical foundations for conditioning prescription. Links oxygen uptake, recovery kinetics, and cardiovascular strain to programming variables.',
-      learningTask: 'Students rotate through all three cardio assessments. For each test, they calculate VO2max, classify aerobic capacity, and compare discrepancies across methods. Students must identify which metric most directly informs intensity prescription.',
-      applicationTask: 'Submit a 2-week aerobic program including: mode selection rationale, intensity zone (RPE and %HRmax), duration, frequency, and week 2 progression. Justification must reference assessment metrics and NSCA conditioning guidelines.',
-      gradebook: {
-        assignmentName: 'M1 Aerobic Assessment to Prescription',
-        pointsPossible: 30
+      "id": "m1",
+      "title": "Module 1: Cardiorespiratory Foundations and Aerobic Adaptation Concepts",
+      "competency": "You will explain how aerobic physiology, VO2 concepts, and recovery kinetics inform evidence-based conditioning decisions.",
+      "instruction": "Read the assigned sections on oxygen transport, central/peripheral adaptation, and VO2 terminology. Focus on conceptual meaning before formulas.",
+      "contentConnection": "Builds the physiological vocabulary needed for all later conditioning and progression modules.",
+      "learningTask": "Create a concept map showing relationships among VO2max, recovery heart rate, stroke volume, and aerobic adaptation.",
+      "applicationTask": "Write a 500-700 word explanatory brief that interprets aerobic assessment outputs and explains how they guide initial intensity and progression decisions.",
+      "gradebook": {
+        "assignmentName": "M1 Aerobic Concept Brief",
+        "pointsPossible": 30
       },
-      masteryCheck: {
-        type: 'short-answer',
-        prompt: 'Explain how recovery heart rate and VO2 estimation together determine initial aerobic training intensity and progression rate.',
-        keywords: ['VO2max', 'recovery', 'intensity', 'progression', 'aerobic adaptation']
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "How do VO2-related indicators and recovery trends together improve the quality of aerobic programming decisions?",
+        "keywords": [
+          "VO2max",
+          "recovery",
+          "intensity",
+          "progression",
+          "adaptation"
+        ]
       }
     },
     {
-      id: 'm2',
-      title: 'Module 2: Strength Assessment and Load Prescription',
-      competency: 'Students must demonstrate the ability to conduct submaximal strength testing, estimate 1RM using validated equations, and prescribe appropriate intensity ranges based on training goals.',
-      instruction: 'Students will: (1) study neuromuscular physiology including motor unit recruitment and rate coding; (2) review NSCA strength testing guidelines; (3) compare direct 1RM testing vs submaximal prediction models; (4) practice Epley and Brzycki equations; (5) examine intensity ranges for strength, hypertrophy, and endurance; (6) analyze safety considerations for general populations.',
-      contentConnection: 'Transitions from aerobic systems to neuromuscular adaptation. Introduces load manipulation as the primary stimulus for muscular strength adaptation.',
-      learningTask: 'Students conduct 5-8RM submaximal tests for lower body, push, and pull movements. They calculate estimated 1RM using two equations and compare variance.',
-      applicationTask: 'Submit a Week 1-2 strength prescription including calculated %1RM loads, sets, reps, rest intervals, and technical rationale referencing neuromuscular adaptation principles.',
-      gradebook: {
-        assignmentName: 'M2 Strength Assessment and Load Prescription',
-        pointsPossible: 30
+      "id": "m2",
+      "title": "Module 2: Strength Assessment Logic and Load Prescription Theory",
+      "competency": "You will explain the conceptual basis for submaximal testing, 1RM estimation, and intensity-zone selection.",
+      "instruction": "Study motor unit recruitment, rate coding, and the logic of submaximal prediction equations. Emphasize why these models are used.",
+      "contentConnection": "Extends Module 1 measurement logic into neuromuscular assessment and load prescription.",
+      "learningTask": "Compare two prediction equations and produce a short analysis of what each model assumes about fatigue and repetition performance.",
+      "applicationTask": "Write a 500-700 word rationale explaining why specific %1RM ranges align with different adaptation goals in novice populations.",
+      "gradebook": {
+        "assignmentName": "M2 Load Prescription Rationale",
+        "pointsPossible": 30
       },
-      masteryCheck: {
-        type: 'short-answer',
-        prompt: 'Explain why 70-85% 1RM is typically prescribed for general strength development in novice trainees.',
-        keywords: ['motor unit recruitment', 'intensity', 'adaptation', 'novice']
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Why is moderate-to-high relative intensity commonly recommended for foundational strength adaptation in novices?",
+        "keywords": [
+          "motor unit recruitment",
+          "intensity",
+          "adaptation",
+          "novice"
+        ]
       }
     },
     {
-      id: 'm3',
-      title: 'Module 3: Exercise Selection and Movement Pattern Integration',
-      competency: 'Students must demonstrate the ability to select exercises based on movement patterns, structural balance principles, equipment constraints, and assessment findings.',
-      instruction: 'Students will: (1) study movement pattern categorization (squat, hinge, push, pull, carry, rotation); (2) analyze structural balance and agonist/antagonist ratios; (3) review NSCA recommendations for exercise order and stabilization demands; (4) evaluate machine vs free-weight considerations; (5) examine common compensation patterns identified in pre-assessment.',
-      contentConnection: 'Integrates strength assessment findings with equipment availability in the UC gym. Connects structural balance to injury prevention and long-term progression.',
-      learningTask: 'Students design a full-body session including at least one movement per primary pattern, ensuring push/pull balance and lower/upper symmetry.',
-      applicationTask: 'Submit a Week 1 full-body session including exercise selection rationale tied directly to assessment data and structural balance considerations.',
-      gradebook: {
-        assignmentName: 'M3 Movement-Based Session Design',
-        pointsPossible: 25
+      "id": "m3",
+      "title": "Module 3: Movement Pattern Theory and Structural Balance",
+      "competency": "You will explain how movement classification and structural balance principles support safe, effective long-term development.",
+      "instruction": "Review movement pattern categories and agonist/antagonist relationships. Focus on conceptual signs of imbalance and compensation.",
+      "contentConnection": "Connects neuromuscular concepts to movement-system thinking and injury-risk reduction principles.",
+      "learningTask": "Develop an annotated framework that defines each major movement pattern and explains its role in balanced programming.",
+      "applicationTask": "Write a 450-650 word analysis defending structural balance priorities using biomechanical and adaptation-focused reasoning.",
+      "gradebook": {
+        "assignmentName": "M3 Structural Balance Analysis",
+        "pointsPossible": 25
       },
-      masteryCheck: {
-        type: 'short-answer',
-        prompt: 'Explain why structural balance between push and pull movements reduces injury risk.',
-        keywords: ['agonist', 'antagonist', 'imbalance', 'injury prevention']
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "How does structural imbalance increase injury risk over time, and why does push-pull balance matter conceptually?",
+        "keywords": [
+          "agonist",
+          "antagonist",
+          "imbalance",
+          "injury prevention"
+        ]
       }
     },
     {
-      id: 'm4',
-      title: 'Module 4: Manipulating Volume, Intensity, and Progression',
-      competency: 'Students must demonstrate the ability to manipulate training variables (sets, reps, intensity, rest, tempo, frequency) to produce specific neuromuscular adaptations using structured overload models.',
-      instruction: 'Students will: (1) review NSCA resistance training guidelines for strength, hypertrophy, and endurance; (2) study progressive overload models including linear progression, double progression, and undulating periodization; (3) analyze volume-load calculations (sets x reps x load); (4) examine fatigue management principles; (5) practice constructing 4-week microcycles using structured overload.',
-      contentConnection: 'Builds directly from strength assessment and exercise selection. Moves students from session design to multi-week adaptation planning.',
-      learningTask: 'Students take their Week 1 program and construct a 4-week progression using at least one overload strategy. They must calculate weekly volume load and identify progression logic.',
-      applicationTask: 'Submit a 4-week microcycle including volume-load calculations, progression strategy justification, rest interval rationale, and anticipated adaptation timeline.',
-      gradebook: {
-        assignmentName: 'M4 4-Week Progressive Microcycle',
-        pointsPossible: 30
+      "id": "m4",
+      "title": "Module 4: Volume, Intensity, and Overload Concepts",
+      "competency": "You will explain how volume, intensity, rest, and frequency interact to drive distinct neuromuscular adaptations.",
+      "instruction": "Read NSCA guidance on training variables and overload models. Pay attention to the conceptual difference between stress dose and adaptation outcome.",
+      "contentConnection": "Builds from Module 2 by shifting from single-variable decisions to multivariable adaptation planning.",
+      "learningTask": "Create a comparison chart of linear, double, and undulating progression models with strengths, limits, and best-use contexts.",
+      "applicationTask": "Write a 600-800 word explanatory essay describing how variable manipulation changes adaptation direction in novice clients.",
+      "gradebook": {
+        "assignmentName": "M4 Overload Concepts Essay",
+        "pointsPossible": 30
       },
-      masteryCheck: {
-        type: 'short-answer',
-        prompt: 'Explain how manipulating volume versus intensity influences neuromuscular adaptation differently in novice clients.',
-        keywords: ['volume', 'intensity', 'overload', 'adaptation']
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "How do volume and intensity create different adaptation signals, and why must they be balanced over time?",
+        "keywords": [
+          "volume",
+          "intensity",
+          "overload",
+          "adaptation"
+        ]
       }
     },
     {
-      id: 'm5',
-      title: 'Module 5: Energy System Development and Conditioning Integration',
-      competency: 'Students must demonstrate the ability to integrate aerobic and anaerobic conditioning into a resistance training program without compromising recovery or adaptation.',
-      instruction: 'Students will: (1) review oxidative, glycolytic, and phosphagen energy systems; (2) examine interference effect literature; (3) study NSCA conditioning recommendations; (4) compare steady-state versus interval models; (5) design weekly training splits that integrate conditioning and strength without excessive fatigue accumulation.',
-      contentConnection: 'Connects aerobic assessment from Module 1 with resistance progression from Modules 2-4.',
-      learningTask: 'Students modify their 4-week strength program to include conditioning sessions. They must justify placement (same day vs alternate day) and intensity based on recovery principles.',
-      applicationTask: 'Submit a 4-week integrated training plan including strength and conditioning placement, intensity zones, and fatigue management strategy.',
-      gradebook: {
-        assignmentName: 'M5 Integrated Strength & Conditioning Plan',
-        pointsPossible: 30
+      "id": "m5",
+      "title": "Module 5: Energy Systems and Concurrent Training Concepts",
+      "competency": "You will explain oxidative, glycolytic, and phosphagen system demands and the conceptual basis of the interference effect.",
+      "instruction": "Study energy system characteristics and concurrent training literature. Focus on mechanism-level explanations rather than session planning.",
+      "contentConnection": "Integrates cardiorespiratory and resistance concepts into a unified adaptation framework.",
+      "learningTask": "Construct a concept matrix linking training stimulus type to dominant energy system demand and expected adaptation outcomes.",
+      "applicationTask": "Write a 550-750 word explanation of the interference effect and defend two evidence-based strategies that reduce its impact.",
+      "gradebook": {
+        "assignmentName": "M5 Interference Effect Explanation",
+        "pointsPossible": 30
       },
-      masteryCheck: {
-        type: 'short-answer',
-        prompt: 'Explain the interference effect and how programming structure can minimize it.',
-        keywords: ['interference', 'recovery', 'energy systems', 'adaptation']
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "What is the interference effect, and which programming principles reduce it without removing conditioning work?",
+        "keywords": [
+          "interference",
+          "recovery",
+          "energy systems",
+          "adaptation"
+        ]
       }
     },
     {
-      id: 'm6',
-      title: 'Module 6: Monitoring Adaptation and Autoregulation',
-      competency: 'Students must demonstrate the ability to monitor fatigue, performance trends, and client response, and adjust programming using autoregulatory principles.',
-      instruction: 'Students will: (1) study fatigue types (central vs peripheral); (2) review RPE-based autoregulation; (3) analyze signs of overreaching versus normal fatigue; (4) examine performance trend tracking; (5) develop decision rules for modifying load, volume, or frequency.',
-      contentConnection: 'Moves from static planning to dynamic programming adjustment.',
-      learningTask: 'Students evaluate three client case studies demonstrating plateau, excessive fatigue, and under-stimulation. They must adjust programming variables accordingly.',
-      applicationTask: 'Submit a monitoring template including weekly check-in metrics, RPE tracking table, and defined decision rules for increasing or decreasing load.',
-      gradebook: {
-        assignmentName: 'M6 Monitoring & Autoregulation Plan',
-        pointsPossible: 25
+      "id": "m6",
+      "title": "Module 6: Fatigue Monitoring and Autoregulation Theory",
+      "competency": "You will explain fatigue typology, performance trend interpretation, and autoregulatory decision logic.",
+      "instruction": "Review central/peripheral fatigue concepts, overreaching definitions, and RPE-based autoregulation frameworks.",
+      "contentConnection": "Moves from fixed planning logic to responsive decision-making based on adaptation signals.",
+      "learningTask": "Analyze three written case scenarios and identify which fatigue pattern is present and what conceptual adjustment rule applies.",
+      "applicationTask": "Write a 500-700 word decision framework that explains when and why load, volume, or frequency should be adjusted.",
+      "gradebook": {
+        "assignmentName": "M6 Autoregulation Decision Framework",
+        "pointsPossible": 25
       },
-      masteryCheck: {
-        type: 'short-answer',
-        prompt: 'Differentiate between functional overreaching and non-functional overreaching.',
-        keywords: ['fatigue', 'overreaching', 'adaptation', 'recovery']
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "How do you distinguish functional overreaching from non-functional overreaching using trend-based evidence?",
+        "keywords": [
+          "fatigue",
+          "overreaching",
+          "adaptation",
+          "recovery"
+        ]
       }
     },
     {
-      id: 'm7',
-      title: 'Module 7: Professional Coaching and Motivational Integration',
-      competency: 'Students must demonstrate the ability to deliver structured sessions while integrating motivational principles and professional communication.',
-      instruction: 'Students will: (1) review autonomy-supportive coaching strategies; (2) examine confidence-building progression; (3) practice delivering corrective feedback; (4) analyze motivational barriers from intake; (5) simulate full training sessions incorporating structured communication.',
-      contentConnection: 'Integrates technical programming competence with client psychology and professional presence.',
-      learningTask: 'Students conduct a supervised mock session including warm-up, strength block, conditioning, and feedback delivery.',
-      applicationTask: 'Submit a session reflection analyzing communication effectiveness, cueing quality, motivational strategy, and professional demeanor.',
-      gradebook: {
-        assignmentName: 'M7 Professional Coaching Practicum',
-        pointsPossible: 20
+      "id": "m7",
+      "title": "Module 7: Coaching Communication and Motivation Concepts",
+      "competency": "You will explain how autonomy support, feedback quality, and communication structure influence adherence and performance.",
+      "instruction": "Read assigned material on motivation theory, coaching language, and feedback timing. Focus on psychological mechanisms and behavior change principles.",
+      "contentConnection": "Adds behavior and communication science to technical programming knowledge.",
+      "learningTask": "Develop a concept brief that contrasts autonomy-supportive versus controlling coaching language and predicted client responses.",
+      "applicationTask": "Write a 450-650 word reflection analyzing how communication choices alter competence perception, engagement, and long-term adherence.",
+      "gradebook": {
+        "assignmentName": "M7 Coaching Psychology Reflection",
+        "pointsPossible": 20
       },
-      masteryCheck: {
-        type: 'short-answer',
-        prompt: 'Explain how autonomy-supportive coaching influences adherence and performance.',
-        keywords: ['autonomy', 'competence', 'adherence', 'motivation']
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "Why does autonomy-supportive coaching typically improve adherence and perceived competence?",
+        "keywords": [
+          "autonomy",
+          "competence",
+          "adherence",
+          "motivation"
+        ]
       }
     },
     {
-      id: 'm8',
-      title: 'Module 8: 8-Week Periodized Client Training Plan',
-      competency: 'Students must demonstrate the ability to design, justify, and defend a complete 8-week training macrocycle grounded in assessment data and evidence-based programming principles.',
-      instruction: 'Students will: (1) review macrocycle planning models; (2) structure two 4-week mesocycles; (3) integrate strength, conditioning, recovery, and progression; (4) justify deload timing; (5) prepare professional program presentation.',
-      contentConnection: 'Synthesizes all prior modules into a comprehensive client plan.',
-      learningTask: 'Peer-review draft macrocycles using structured rubric evaluating load progression, fatigue management, and logical coherence.',
-      applicationTask: 'Submit final 8-week macrocycle including assessment summary, weekly progression tables, conditioning integration, monitoring strategy, and written defense of programming logic.',
-      gradebook: {
-        assignmentName: 'M8 8-Week Periodized Client Plan',
-        pointsPossible: 50
+      "id": "m8",
+      "title": "Module 8: Periodization and Macrocycle Knowledge Synthesis",
+      "competency": "You will synthesize assessment, adaptation, progression, and recovery concepts into a coherent periodization rationale.",
+      "instruction": "Review macrocycle and mesocycle theory, deload logic, and progression architecture. Emphasize conceptual coherence and evidence alignment.",
+      "contentConnection": "Synthesizes all previous modules into an integrated knowledge framework for long-term program reasoning.",
+      "learningTask": "Create an annotated concept outline showing how assessment data, overload progression, conditioning integration, and monitoring connect across an 8-week plan.",
+      "applicationTask": "Write a 700-900 word capstone defense explaining the logic of an 8-week periodized model and how each phase supports targeted adaptation.",
+      "gradebook": {
+        "assignmentName": "M8 Periodization Concept Defense",
+        "pointsPossible": 50
       },
-      masteryCheck: {
-        type: 'short-answer',
-        prompt: 'Explain how assessment data informed your macrocycle design and progression model.',
-        keywords: ['assessment', 'periodization', 'progression', 'adaptation']
+      "masteryCheck": {
+        "type": "short-answer",
+        "prompt": "How should assessment evidence shape macrocycle structure and progression decisions across phases?",
+        "keywords": [
+          "assessment",
+          "periodization",
+          "progression",
+          "adaptation"
+        ]
       }
     }
   ]
