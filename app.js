@@ -91,6 +91,11 @@ function loadState() {
   state.config = savedConfig ? parseJSON(savedConfig, sampleConfig) : sampleConfig;
   state.progress = savedProgress ? parseJSON(savedProgress, {}) : {};
   el.configInput.value = JSON.stringify(state.config, null, 2);
+  setMessage(
+    el.setupMessage,
+    'Start with "Load Sample", edit JSON, then click "Save Config" to apply changes to the student view.',
+    'warn'
+  );
   render();
 }
 
@@ -267,7 +272,11 @@ el.btnSample.addEventListener('click', () => {
   state.config = JSON.parse(JSON.stringify(sampleConfig));
   el.configInput.value = JSON.stringify(state.config, null, 2);
   localStorage.setItem(CONFIG_KEY, JSON.stringify(state.config));
-  setMessage(el.setupMessage, 'Loaded sample configuration and applied it to the student view.', 'ok');
+  setMessage(
+    el.setupMessage,
+    'Sample loaded and applied. Next: edit JSON, then click "Save Config" to apply your custom version.',
+    'ok'
+  );
   render();
 });
 
@@ -285,15 +294,23 @@ el.btnSave.addEventListener('click', () => {
 
   state.config = parsed;
   localStorage.setItem(CONFIG_KEY, JSON.stringify(parsed));
-  setMessage(el.setupMessage, 'Configuration saved.', 'ok');
+  setMessage(el.setupMessage, 'Configuration saved and applied to the student view.', 'ok');
   render();
 });
 
 el.btnResetProgress.addEventListener('click', () => {
   state.progress = {};
   saveProgress();
-  setMessage(el.setupMessage, 'Student progress reset.', 'ok');
+  setMessage(el.setupMessage, 'Student progress reset to zero for all modules.', 'ok');
   render();
+});
+
+el.configInput.addEventListener('input', () => {
+  setMessage(
+    el.setupMessage,
+    'Unsaved edits detected. Click "Save Config" to apply changes to the student view.',
+    'warn'
+  );
 });
 
 loadState();

@@ -16,6 +16,28 @@
     <section class="card">
       <h2>Instructor Setup</h2>
       <p>Create or edit module configuration. Students advance only after passing each mastery check.</p>
+
+      <div class="guide">
+        <h3>Teacher Setup: Do These Steps In Order</h3>
+        <ol>
+          <li>Click <strong>Load Sample</strong> first. This gives you a working template.</li>
+          <li>Edit the JSON in <strong>Course Configuration</strong>.</li>
+          <li>Click <strong>Save Config</strong> to apply your changes to the student side.</li>
+          <li>Check <strong>Student Module View</strong> to confirm modules, locks, and checks look right.</li>
+          <li>If you want to test again from zero, click <strong>Reset Student Progress</strong>.</li>
+        </ol>
+        <p><strong>Important:</strong> Typing in the JSON box does nothing by itself. Changes only apply after you click <strong>Save Config</strong>.</p>
+      </div>
+
+      <div class="guide">
+        <h3>What Each Button Does</h3>
+        <ul>
+          <li><strong>Load Sample:</strong> Replaces current config with a safe example and updates the student view.</li>
+          <li><strong>Save Config:</strong> Validates JSON and applies it to the student view.</li>
+          <li><strong>Reset Student Progress:</strong> Clears module completion history for testing.</li>
+        </ul>
+      </div>
+
       <div class="row">
         <button id="btnSample">Load Sample</button>
         <button id="btnSave">Save Config</button>
@@ -23,6 +45,7 @@
       </div>
       <label for="configInput">Course Configuration (JSON)</label>
       <textarea id="configInput" rows="20"></textarea>
+      <p class="small"><strong>Reminder:</strong> After editing JSON, always click <strong>Save Config</strong>.</p>
       <p id="setupMessage" class="message" aria-live="polite"></p>
     </section>
 
