@@ -1,26 +1,26 @@
 {
-  "title": "Fitness-Based PE Instruction",
+  "title": "Applied Strength and Conditioning Program Design",
   "instructor": "Instructor Name",
   "outcomes": [
-    "Design fitness lessons aligned to standards and learner needs.",
-    "Use performance evidence to determine mastery and advancement.",
-    "Apply safe strength and conditioning guidelines for adolescents."
+    "Conduct valid fitness assessments and convert findings into exercise prescriptions.",
+    "Design progressive strength and conditioning programs using NSCA-aligned principles.",
+    "Monitor adaptation and adjust plans using autoregulation and coaching best practices."
   ],
   "resources": [
     {
-      "title": "Promoting Active Lifestyles in Schools",
-      "citation": "Human Kinetics (2018)",
-      "notes": "Use for school-wide physical activity models and curriculum framing."
+      "title": "NSCA Essentials of Strength Training and Conditioning",
+      "citation": "NSCA",
+      "notes": "Primary framework for testing, prescription, progression, and periodization."
     },
     {
       "title": "Exercise Testing and Prescription",
       "citation": "Course text",
-      "notes": "Use to design valid assessment tasks and interpretation checkpoints."
+      "notes": "Assessment protocols, contraindications, and fitness classification methods."
     },
     {
-      "title": "NSCA Guide to High School Strength and Conditioning",
-      "citation": "NSCA (2021)",
-      "notes": "Use for safe strength programming and progression principles."
+      "title": "UC Gym Assessment and Programming Protocol Packet",
+      "citation": "Program packet",
+      "notes": "Local implementation procedures, equipment constraints, and coaching standards."
     }
   ],
   "completionWebhookUrl": "",
@@ -29,166 +29,146 @@
   "modules": [
     {
       "id": "m1",
-      "title": "Module 1: Competency-Based Foundations",
-      "competency": "Explain competency-based mastery learning for PE in practice.",
-      "instruction": "Read the assigned section from Promoting Active Lifestyles in Schools and take notes on mastery progression language.",
-      "contentConnection": "Connect course outcomes to how evidence is collected before advancement.",
-      "learningTask": "Create a concept map showing competency targets, evidence types, and advancement rules.",
-      "applicationTask": "Submit a one-page concept map and a 150-word rationale describing how your progression decisions protect instructional quality.",
+      "title": "Module 1: Cardiorespiratory Assessment and Aerobic Programming Foundations",
+      "competency": "Students must demonstrate the ability to conduct submaximal aerobic assessments, calculate VO2max estimates, interpret recovery kinetics, and prescribe an evidence-based aerobic training plan aligned to NSCA principles.",
+      "instruction": "Students will: (1) study aerobic energy system physiology including central and peripheral adaptations; (2) review NSCA testing principles including validity, reliability, and contraindications; (3) analyze Bruce Protocol, Cooper Test, and YMCA Step Test procedures; (4) calculate VO2max estimates from raw data; (5) classify aerobic fitness level; (6) construct an intensity prescription using RPE, %HRmax, and/or talk test models; (7) justify duration and frequency using NSCA volume guidelines.",
+      "contentConnection": "Establishes physiological and mathematical foundations for conditioning prescription. Links oxygen uptake, recovery kinetics, and cardiovascular strain to programming variables.",
+      "learningTask": "Students rotate through all three cardio assessments. For each test, they calculate VO2max, classify aerobic capacity, and compare discrepancies across methods. Students must identify which metric most directly informs intensity prescription.",
+      "applicationTask": "Submit a 2-week aerobic program including: mode selection rationale, intensity zone (RPE and %HRmax), duration, frequency, and week 2 progression. Justification must reference assessment metrics and NSCA conditioning guidelines.",
       "gradebook": {
-        "assignmentName": "M1 Competency Foundations",
-        "pointsPossible": 10
+        "assignmentName": "M1 Aerobic Assessment to Prescription",
+        "pointsPossible": 30
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "In 4-6 sentences, explain competency targets, mastery evidence, and how students advance.",
-        "keywords": ["evidence", "criteria", "advance"]
+        "prompt": "Explain how recovery heart rate and VO2 estimation together determine initial aerobic training intensity and progression rate.",
+        "keywords": ["VO2max", "recovery", "intensity", "progression", "aerobic adaptation"]
       }
     },
     {
       "id": "m2",
-      "title": "Module 2: Standards and Outcome Mapping",
-      "competency": "Align PE standards and course outcomes to measurable module competencies.",
-      "instruction": "Review your standards matrix and identify verbs that can be observed and scored.",
-      "contentConnection": "Use the text examples to translate broad goals into measurable statements.",
-      "learningTask": "Map at least 3 PE standards to outcomes and write one measurable competency for each.",
-      "applicationTask": "Build a standards-to-competency table with measurable performance indicators.",
+      "title": "Module 2: Strength Assessment and Load Prescription",
+      "competency": "Students must demonstrate the ability to conduct submaximal strength testing, estimate 1RM using validated equations, and prescribe appropriate intensity ranges based on training goals.",
+      "instruction": "Students will: (1) study neuromuscular physiology including motor unit recruitment and rate coding; (2) review NSCA strength testing guidelines; (3) compare direct 1RM testing vs submaximal prediction models; (4) practice Epley and Brzycki equations; (5) examine intensity ranges for strength, hypertrophy, and endurance; (6) analyze safety considerations for general populations.",
+      "contentConnection": "Transitions from aerobic systems to neuromuscular adaptation. Introduces load manipulation as the primary stimulus for muscular strength adaptation.",
+      "learningTask": "Students conduct 5-8RM submaximal tests for lower body, push, and pull movements. They calculate estimated 1RM using two equations and compare variance.",
+      "applicationTask": "Submit a Week 1-2 strength prescription including calculated %1RM loads, sets, reps, rest intervals, and technical rationale referencing neuromuscular adaptation principles.",
       "gradebook": {
-        "assignmentName": "M2 Standards Mapping",
-        "pointsPossible": 10
+        "assignmentName": "M2 Strength Assessment and Load Prescription",
+        "pointsPossible": 30
       },
       "masteryCheck": {
-        "type": "mcq",
-        "prompt": "Which outcome statement is most measurable for competency-based progression?",
-        "options": [
-          "Students will understand fitness concepts.",
-          "Students can complete a 3-station circuit safely with correct form on at least 4 of 5 criteria.",
-          "Students should try their best in class."
-        ],
-        "correctIndex": 1
+        "type": "short-answer",
+        "prompt": "Explain why 70-85% 1RM is typically prescribed for general strength development in novice trainees.",
+        "keywords": ["motor unit recruitment", "intensity", "adaptation", "novice"]
       }
     },
     {
       "id": "m3",
-      "title": "Module 3: Baseline Fitness Assessment",
-      "competency": "Design and administer a baseline assessment protocol with valid data collection.",
-      "instruction": "Read Exercise Testing and Prescription guidance on validity, safety, and sequence of testing.",
-      "contentConnection": "Identify which measures will be used later for growth comparisons.",
-      "learningTask": "Build a baseline protocol including safety screen, test sequence, and scoring sheet.",
-      "applicationTask": "Submit your baseline protocol with a data table template and safety notes.",
+      "title": "Module 3: Exercise Selection and Movement Pattern Integration",
+      "competency": "Students must demonstrate the ability to select exercises based on movement patterns, structural balance principles, equipment constraints, and assessment findings.",
+      "instruction": "Students will: (1) study movement pattern categorization (squat, hinge, push, pull, carry, rotation); (2) analyze structural balance and agonist/antagonist ratios; (3) review NSCA recommendations for exercise order and stabilization demands; (4) evaluate machine vs free-weight considerations; (5) examine common compensation patterns identified in pre-assessment.",
+      "contentConnection": "Integrates strength assessment findings with equipment availability in the UC gym. Connects structural balance to injury prevention and long-term progression.",
+      "learningTask": "Students design a full-body session including at least one movement per primary pattern, ensuring push/pull balance and lower/upper symmetry.",
+      "applicationTask": "Submit a Week 1 full-body session including exercise selection rationale tied directly to assessment data and structural balance considerations.",
       "gradebook": {
-        "assignmentName": "M3 Baseline Assessment Plan",
-        "pointsPossible": 15
+        "assignmentName": "M3 Movement-Based Session Design",
+        "pointsPossible": 25
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "Describe your baseline protocol and explain how it supports valid before/after comparisons.",
-        "keywords": ["baseline", "protocol", "valid"]
+        "prompt": "Explain why structural balance between push and pull movements reduces injury risk.",
+        "keywords": ["agonist", "antagonist", "imbalance", "injury prevention"]
       }
     },
     {
       "id": "m4",
-      "title": "Module 4: Performance Rubrics and Mastery Levels",
-      "competency": "Create a rubric with clear novice, developing, proficient, and advanced descriptors.",
-      "instruction": "Review rubric examples and isolate criteria that are observable in a PE setting.",
-      "contentConnection": "Ensure each level can be scored consistently by different instructors.",
-      "learningTask": "Draft a 4-level rubric for one movement competency and include observable criteria.",
-      "applicationTask": "Submit a completed 4-level rubric and a short scoring guide.",
+      "title": "Module 4: Manipulating Volume, Intensity, and Progression",
+      "competency": "Students must demonstrate the ability to manipulate training variables (sets, reps, intensity, rest, tempo, frequency) to produce specific neuromuscular adaptations using structured overload models.",
+      "instruction": "Students will: (1) review NSCA resistance training guidelines for strength, hypertrophy, and endurance; (2) study progressive overload models including linear progression, double progression, and undulating periodization; (3) analyze volume-load calculations (sets x reps x load); (4) examine fatigue management principles; (5) practice constructing 4-week microcycles using structured overload.",
+      "contentConnection": "Builds directly from strength assessment and exercise selection. Moves students from session design to multi-week adaptation planning.",
+      "learningTask": "Students take their Week 1 program and construct a 4-week progression using at least one overload strategy. They must calculate weekly volume load and identify progression logic.",
+      "applicationTask": "Submit a 4-week microcycle including volume-load calculations, progression strategy justification, rest interval rationale, and anticipated adaptation timeline.",
       "gradebook": {
-        "assignmentName": "M4 Rubric Design",
-        "pointsPossible": 10
+        "assignmentName": "M4 4-Week Progressive Microcycle",
+        "pointsPossible": 30
       },
       "masteryCheck": {
-        "type": "mcq",
-        "prompt": "Which rubric descriptor is strongest for reliable scoring?",
-        "options": [
-          "Student shows good effort most days.",
-          "Student demonstrates proper squat mechanics on 8 of 10 reps with neutral spine and knee tracking.",
-          "Student participation is acceptable."
-        ],
-        "correctIndex": 1
+        "type": "short-answer",
+        "prompt": "Explain how manipulating volume versus intensity influences neuromuscular adaptation differently in novice clients.",
+        "keywords": ["volume", "intensity", "overload", "adaptation"]
       }
     },
     {
       "id": "m5",
-      "title": "Module 5: Safe Strength and Conditioning Design",
-      "competency": "Plan age-appropriate strength and conditioning sessions using safe progression principles.",
-      "instruction": "Read the NSCA high school progression guidance and identify risk controls.",
-      "contentConnection": "Tie your session design to adolescent safety and progression over time.",
-      "learningTask": "Draft a 2-week microcycle with warm-up, primary lifts, accessories, and recovery.",
-      "applicationTask": "Submit your microcycle with rationale for load progression and supervision points.",
+      "title": "Module 5: Energy System Development and Conditioning Integration",
+      "competency": "Students must demonstrate the ability to integrate aerobic and anaerobic conditioning into a resistance training program without compromising recovery or adaptation.",
+      "instruction": "Students will: (1) review oxidative, glycolytic, and phosphagen energy systems; (2) examine interference effect literature; (3) study NSCA conditioning recommendations; (4) compare steady-state versus interval models; (5) design weekly training splits that integrate conditioning and strength without excessive fatigue accumulation.",
+      "contentConnection": "Connects aerobic assessment from Module 1 with resistance progression from Modules 2-4.",
+      "learningTask": "Students modify their 4-week strength program to include conditioning sessions. They must justify placement (same day vs alternate day) and intensity based on recovery principles.",
+      "applicationTask": "Submit a 4-week integrated training plan including strength and conditioning placement, intensity zones, and fatigue management strategy.",
       "gradebook": {
-        "assignmentName": "M5 Safe S&C Plan",
-        "pointsPossible": 15
+        "assignmentName": "M5 Integrated Strength & Conditioning Plan",
+        "pointsPossible": 30
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "Explain your progression choices and the safety safeguards used for adolescent learners.",
-        "keywords": ["progression", "safety", "adolescent"]
+        "prompt": "Explain the interference effect and how programming structure can minimize it.",
+        "keywords": ["interference", "recovery", "energy systems", "adaptation"]
       }
     },
     {
       "id": "m6",
-      "title": "Module 6: Differentiation and Intervention",
-      "competency": "Differentiate instruction and interventions based on student performance evidence.",
-      "instruction": "Review baseline and rubric data examples and classify students by support need.",
-      "contentConnection": "Intervention decisions must be tied to evidence, not participation alone.",
-      "learningTask": "Create a tiered intervention plan for students below, at, and above target mastery.",
-      "applicationTask": "Submit a tiered intervention matrix with coaching cues and reassessment trigger.",
+      "title": "Module 6: Monitoring Adaptation and Autoregulation",
+      "competency": "Students must demonstrate the ability to monitor fatigue, performance trends, and client response, and adjust programming using autoregulatory principles.",
+      "instruction": "Students will: (1) study fatigue types (central vs peripheral); (2) review RPE-based autoregulation; (3) analyze signs of overreaching versus normal fatigue; (4) examine performance trend tracking; (5) develop decision rules for modifying load, volume, or frequency.",
+      "contentConnection": "Moves from static planning to dynamic programming adjustment.",
+      "learningTask": "Students evaluate three client case studies demonstrating plateau, excessive fatigue, and under-stimulation. They must adjust programming variables accordingly.",
+      "applicationTask": "Submit a monitoring template including weekly check-in metrics, RPE tracking table, and defined decision rules for increasing or decreasing load.",
       "gradebook": {
-        "assignmentName": "M6 Differentiation Plan",
-        "pointsPossible": 10
+        "assignmentName": "M6 Monitoring & Autoregulation Plan",
+        "pointsPossible": 25
       },
       "masteryCheck": {
-        "type": "mcq",
-        "prompt": "Which intervention best reflects evidence-based differentiation?",
-        "options": [
-          "Give every student the same task regardless of assessment results.",
-          "Use baseline and rubric data to assign targeted technique stations and coaching cues.",
-          "Advance all students to the next module after one class period."
-        ],
-        "correctIndex": 1
+        "type": "short-answer",
+        "prompt": "Differentiate between functional overreaching and non-functional overreaching.",
+        "keywords": ["fatigue", "overreaching", "adaptation", "recovery"]
       }
     },
     {
       "id": "m7",
-      "title": "Module 7: Feedback, Reassessment, and Advancement",
-      "competency": "Use actionable feedback cycles and reassessment criteria to support mastery growth.",
-      "instruction": "Review feedback loop examples and draft a reassessment policy with timelines.",
-      "contentConnection": "Students should know exactly what to improve before reassessment.",
-      "learningTask": "Design a feedback protocol with clear reassessment windows and advancement cutoffs.",
-      "applicationTask": "Submit a feedback/reassessment workflow including communication templates.",
+      "title": "Module 7: Professional Coaching and Motivational Integration",
+      "competency": "Students must demonstrate the ability to deliver structured sessions while integrating motivational principles and professional communication.",
+      "instruction": "Students will: (1) review autonomy-supportive coaching strategies; (2) examine confidence-building progression; (3) practice delivering corrective feedback; (4) analyze motivational barriers from intake; (5) simulate full training sessions incorporating structured communication.",
+      "contentConnection": "Integrates technical programming competence with client psychology and professional presence.",
+      "learningTask": "Students conduct a supervised mock session including warm-up, strength block, conditioning, and feedback delivery.",
+      "applicationTask": "Submit a session reflection analyzing communication effectiveness, cueing quality, motivational strategy, and professional demeanor.",
       "gradebook": {
-        "assignmentName": "M7 Feedback and Reassessment",
-        "pointsPossible": 10
+        "assignmentName": "M7 Professional Coaching Practicum",
+        "pointsPossible": 20
       },
       "masteryCheck": {
         "type": "short-answer",
-        "prompt": "Describe how students receive feedback, when they reassess, and what counts as mastery.",
-        "keywords": ["feedback", "reassess", "mastery"]
+        "prompt": "Explain how autonomy-supportive coaching influences adherence and performance.",
+        "keywords": ["autonomy", "competence", "adherence", "motivation"]
       }
     },
     {
       "id": "m8",
-      "title": "Module 8: Capstone Implementation Plan",
-      "competency": "Integrate outcomes, assessment, safety, and progression into a complete PE unit plan.",
-      "instruction": "Review all prior module deliverables and combine them into one coherent unit implementation plan.",
-      "contentConnection": "Your capstone must show direct alignment between competencies, evidence, and grade reporting.",
-      "learningTask": "Produce a capstone unit plan that includes timeline, assessments, differentiation, and reporting.",
-      "applicationTask": "Submit the full unit packet with assessment tools, progression rules, and gradebook mapping.",
+      "title": "Module 8: 8-Week Periodized Client Training Plan",
+      "competency": "Students must demonstrate the ability to design, justify, and defend a complete 8-week training macrocycle grounded in assessment data and evidence-based programming principles.",
+      "instruction": "Students will: (1) review macrocycle planning models; (2) structure two 4-week mesocycles; (3) integrate strength, conditioning, recovery, and progression; (4) justify deload timing; (5) prepare professional program presentation.",
+      "contentConnection": "Synthesizes all prior modules into a comprehensive client plan.",
+      "learningTask": "Peer-review draft macrocycles using structured rubric evaluating load progression, fatigue management, and logical coherence.",
+      "applicationTask": "Submit final 8-week macrocycle including assessment summary, weekly progression tables, conditioning integration, monitoring strategy, and written defense of programming logic.",
       "gradebook": {
-        "assignmentName": "M8 Capstone Unit Plan",
-        "pointsPossible": 20
+        "assignmentName": "M8 8-Week Periodized Client Plan",
+        "pointsPossible": 50
       },
       "masteryCheck": {
-        "type": "mcq",
-        "prompt": "Which capstone plan is most aligned to competency-based instruction?",
-        "options": [
-          "A weekly plan that grades attendance and gives one final test at the end.",
-          "A sequenced unit with baseline data, rubric checkpoints, reassessment opportunities, and advancement by demonstrated mastery.",
-          "A plan with engaging activities but no explicit criteria for progression."
-        ],
-        "correctIndex": 1
+        "type": "short-answer",
+        "prompt": "Explain how assessment data informed your macrocycle design and progression model.",
+        "keywords": ["assessment", "periodization", "progression", "adaptation"]
       }
     }
   ]
