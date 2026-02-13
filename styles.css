@@ -123,6 +123,25 @@ textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
   padding: .6rem;
   margin-top: .6rem;
 }
+.lesson-content {
+  margin-top: .6rem;
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+  border-left: 4px solid #1d4ed8;
+  border-radius: .5rem;
+  padding: .6rem;
+}
+.lesson-item + .lesson-item {
+  margin-top: .55rem;
+}
+.lesson-item h5 {
+  margin: 0 0 .25rem 0;
+  font-size: .95rem;
+}
+.lesson-item p {
+  margin: 0;
+  line-height: 1.4;
+}
 .message { margin-top: .65rem; min-height: 1.1rem; }
 .message.ok { color: var(--ok); }
 .message.warn { color: var(--warn); }
